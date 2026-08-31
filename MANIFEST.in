@@ -1,3 +1,9 @@
 recursive-include runtime/deeprail_runtime/resources *
 include README.md
 include LICENSE
+include LICENSE-DOCUMENTATION
+include LICENSE-BOUNDARY.md
+include TRADEMARK.md
+include SECURITY.md
+include SUPPORT.md
+include AUTHORSHIP.md

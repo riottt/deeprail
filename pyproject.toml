@@ -1,6 +1,6 @@
 
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77.0.3", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,8 +9,8 @@ version = "0.16.8"
 description = "DeepRail — AI-native organization and engineering standard, workflow runtime, and evidence-gated operating system"
 readme = "README.md"
 requires-python = ">=3.10"
-license = "MIT"
-license-files = ["LICENSE", "LICENSE-DOCUMENTATION"]
+license = "MIT AND CC-BY-4.0"
+license-files = ["LICENSE", "LICENSE-DOCUMENTATION", "LICENSE-BOUNDARY.md"]
 authors = [{name = "RIO AMADA"}]
 dependencies = [
   "PyYAML>=6.0",
