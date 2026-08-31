@@ -8,6 +8,8 @@ DeepRail now connects the long-form Book to problem diagnostics, stable Standard
 
 ## Start
 
+Python **3.10 or newer** is required. For runtime use, install the package in a virtual environment:
+
 - [Japanese Book — 45 chapters + ending](book/ja/chapters/README.md)
 - [Japanese 10-minute Quickstart](docs/ja/quickstart.md)
 - [Diagnostic](docs/ja/diagnostic.md)
@@ -24,7 +26,11 @@ deeprail init --target /path/to/project --profile lightweight --communication en
 
 ## Validate
 
+For the full repository validation commands below, install the development extras first:
+
 ```bash
+pip install -e ".[dev]"
+
 ./scripts/generate
 ./scripts/check
 python3 -m unittest discover -s tests -v
@@ -40,7 +46,9 @@ python3 -m build
 - Runtime communication and artifact output: Japanese and English
 - Software license: [MIT](LICENSE)
 - Documentation license: [CC BY 4.0](LICENSE-DOCUMENTATION)
+- License scope: [LICENSE-BOUNDARY.md](LICENSE-BOUNDARY.md)
 - Release history: [CHANGELOG.md](CHANGELOG.md)
+- Support: [GitHub Issues](https://github.com/riottt/deeprail/issues) · [Security](SECURITY.md)
 
 
 ## Authorship

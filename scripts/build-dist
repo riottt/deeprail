@@ -2,6 +2,8 @@
 from pathlib import Path
 import zipfile, hashlib, json, re, subprocess
 ROOT=Path(__file__).resolve().parents[1]
+status=subprocess.run(["git","-C",str(ROOT),"status","--porcelain","--untracked-files=all"],capture_output=True,text=True,check=True)
+if status.stdout.strip(): raise SystemExit("release distribution requires a clean Git worktree")
 subprocess.run([str(ROOT/"scripts/generate")],check=True)
 subprocess.run([str(ROOT/"scripts/check")],check=True)
 out=ROOT/".artifacts"/"dist"; out.mkdir(parents=True,exist_ok=True)
@@ -16,8 +18,10 @@ def included(p):
     if p.suffix==".pyc": return False
     if any(part.endswith(".egg-info") for part in rel.parts): return False
     return p.is_file()
+tracked=subprocess.run(["git","-C",str(ROOT),"ls-files","-z"],capture_output=True,check=True).stdout.split(b"\0")
+tracked_paths=[ROOT/Path(raw.decode("utf-8")) for raw in tracked if raw]
 with zipfile.ZipFile(zpath,"w",zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-    for p in sorted(ROOT.rglob("*")):
+    for p in sorted(tracked_paths):
         if included(p): z.write(p,Path(f"deeprail-{version}")/p.relative_to(ROOT))
 sha=hashlib.sha256(zpath.read_bytes()).hexdigest()
 (zpath.with_suffix(".zip.sha256")).write_text(f"{sha}  {zpath.name}\n",encoding="utf-8")

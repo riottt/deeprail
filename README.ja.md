@@ -36,6 +36,8 @@ Repeated friction → Rule / Eval / Workflow / Harness
 
 ## 10分で動かす
 
+Python **3.10以上**が必要です。Runtimeだけを使う場合は、仮想環境でパッケージをインストールします。
+
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
@@ -83,7 +85,11 @@ examples/     Runnable / policy / organization golden paths
 
 ## Validation
 
+リポジトリ全体の検証を行う場合は、先に開発用依存関係を追加します。
+
 ```bash
+pip install -e ".[dev]"
+
 ./scripts/generate
 ./scripts/check
 python3 -m unittest discover -s tests -v
@@ -104,6 +110,8 @@ CI / Docs Build / Release Build workflows are included under `.github/workflows/
 - Runtime communication and artifact output: Japanese and English
 - Software license: [`LICENSE`](LICENSE)
 - Documentation license: [`LICENSE-DOCUMENTATION`](LICENSE-DOCUMENTATION)
+- License scope: [`LICENSE-BOUNDARY.md`](LICENSE-BOUNDARY.md)
+- Support: [GitHub Issues](https://github.com/riottt/deeprail/issues) · [`SECURITY.md`](SECURITY.md)
 
 This release is self-contained for publication and use. Future changes to canonical semantics, stable IDs, and release scope remain governance decisions.
 
