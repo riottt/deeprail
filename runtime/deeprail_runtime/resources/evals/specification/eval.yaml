@@ -1,0 +1,7 @@
+id: eval-specification-readiness
+checks:
+- intent is explicit
+- acceptance criteria are testable
+- non-goals are explicit
+- known unknowns are explicit
+- required evidence is declared

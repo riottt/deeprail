@@ -1,0 +1,23 @@
+{
+  "standard_version_strategy": "single-version",
+  "primary_authoring_language": "ja",
+  "official_projection_languages": [
+    "ja",
+    "en"
+  ],
+  "projection_statuses": [
+    "synced",
+    "reviewing",
+    "outdated",
+    "missing"
+  ],
+  "release_policy": {
+    "required_synced_languages": [
+      "ja",
+      "en"
+    ],
+    "allow_incomplete_when_release_status": [
+      "unreleased"
+    ]
+  }
+}

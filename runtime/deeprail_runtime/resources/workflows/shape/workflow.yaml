@@ -1,0 +1,50 @@
+id: deeprail-shape
+purpose: Turn an abstract request into something humans and AI can inspect together.
+module_refs:
+- DR-M05
+inputs:
+- discovery output
+outputs:
+- scenario
+- prototype/wireframe/example/interface sketch
+required_evidence:
+- shape artifact linked to the stated intent
+exit_condition: Stakeholders can judge the same concrete representation.
+decision_rights: AI may generate options; commitment requires the configured decision
+  owner.
+failure_return_path:
+- discover
+- shape
+next:
+- align
+- specify
+evidence_policy:
+  min_count: 1
+  any_of:
+  - - observed_behavior
+    - other
+  allow_self_report: false
+agent_instructions:
+- Create the cheapest concrete artifact that makes ambiguity inspectable.
+- Do not over-design beyond the decision being shaped.
+i18n:
+  ja:
+    purpose: 抽象的な要求を、HumanとAIが同じものを見て判断できる具体Artifactへ変える。
+    inputs:
+    - Discover Output
+    outputs:
+    - Scenario
+    - Prototype / Wireframe / Example / Interface Sketch
+    required_evidence:
+    - Shape Artifactが元のIntentへTraceできる
+    exit_condition: Stakeholderが同じ具体表現を見て判断できる。
+    decision_rights: AIはOptionを作れる。Commitmentは設定されたDecision Ownerが行う。
+    failure_return_path:
+    - discover
+    - shape
+    next:
+    - align
+    - specify
+    agent_instructions:
+    - 曖昧さを見えるようにする最小コストの具体Artifactを作る。
+    - 今回のDecisionを超えて過剰設計しない。

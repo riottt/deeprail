@@ -1,0 +1,83 @@
+shared_reality:
+  label_ja: Shared Reality / 要求・認識
+  book_chapters:
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  modules:
+  - DR-M05
+  - DR-M14
+  workflows:
+  - discover
+  - shape
+  - align
+  - specify
+evidence:
+  label_ja: Evidence / 完了証明
+  book_chapters:
+  - 26
+  - 27
+  - 35
+  modules:
+  - DR-M17
+  workflows:
+  - verify
+  - decide
+review:
+  label_ja: Human Review / Attention
+  book_chapters:
+  - 22
+  - 26
+  - 27
+  modules:
+  - DR-M17
+  - DR-M19
+  workflows:
+  - verify
+  - decide
+delegation:
+  label_ja: Delegation / Decision Rights
+  book_chapters:
+  - 21
+  - 25
+  - 27
+  - 31
+  modules:
+  - DR-M19
+  workflows:
+  - decompose
+  - execute
+  - verify
+  - decide
+delivery:
+  label_ja: Delivery System
+  book_chapters:
+  - 32
+  - 33
+  - 34
+  - 35
+  - 36
+  - 37
+  modules:
+  - DR-M07
+  - DR-M09
+  - DR-M15
+  workflows:
+  - execute
+  - verify
+reinvestment:
+  label_ja: Reinvestment / 組織学習
+  book_chapters:
+  - 11
+  - 12
+  - 38
+  - 44
+  - 45
+  modules:
+  - DR-M13
+  - DR-M21
+  - DR-M25
+  workflows:
+  - reinvest

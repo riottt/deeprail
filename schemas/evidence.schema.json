@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeepRail Evidence Packet",
+  "type": "object",
+  "required": [
+    "work_id",
+    "intent",
+    "evidence",
+    "unknowns",
+    "decision"
+  ],
+  "properties": {
+    "work_id": {
+      "type": "string"
+    },
+    "intent": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "description"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "workflow": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "observed_behavior",
+              "machine_check",
+              "human_decision",
+              "independent_evaluation",
+              "other",
+              "self_report"
+            ]
+          },
+          "description": {
+            "type": "string"
+          },
+          "location": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verified": {
+            "type": "boolean"
+          },
+          "actor": {
+            "enum": [
+              "human",
+              "ai",
+              "policy",
+              "tool"
+            ]
+          },
+          "independent": {
+            "type": "boolean"
+          },
+          "result": {
+            "enum": [
+              "pass",
+              "fail",
+              "unknown"
+            ]
+          }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "decision": {
+      "enum": [
+        "pass",
+        "retry",
+        "reject",
+        "escalate",
+        "defer"
+      ]
+    }
+  }
+}

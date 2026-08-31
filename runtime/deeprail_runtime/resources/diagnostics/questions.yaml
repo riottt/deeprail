@@ -1,0 +1,82 @@
+version: 1
+scale:
+  min: 0
+  max: 3
+  meaning:
+    '0': not established
+    '1': ad-hoc
+    '2': repeatable in parts
+    '3': systematically established
+questions:
+- id: SR1
+  dimension: shared_reality
+  text_ja: 要求・制約・受入条件がHumanとAIから同じ参照先で確認できる
+  reverse: false
+- id: SR2
+  dimension: shared_reality
+  text_ja: 曖昧な要求を実装前にScenario / Prototype / Specへ固定できる
+  reverse: false
+- id: SR3
+  dimension: shared_reality
+  text_ja: 重要DecisionとUnknownが会話の中だけに残らない
+  reverse: false
+- id: EV1
+  dimension: evidence
+  text_ja: AIの『完了しました』以外に、再現可能な完了Evidenceがある
+  reverse: false
+- id: EV2
+  dimension: evidence
+  text_ja: User-visible behaviorを必要に応じてObserved Behaviorで確認している
+  reverse: false
+- id: EV3
+  dimension: evidence
+  text_ja: High-risk WorkでExecutorとEvaluatorを分離できる
+  reverse: false
+- id: RV1
+  dimension: review
+  text_ja: Human ReviewはRaw DiffだけでなくDecision / Evidence中心にできている
+  reverse: false
+- id: RV2
+  dimension: review
+  text_ja: Review待ちQueueやHuman Waitを計測できる
+  reverse: false
+- id: RV3
+  dimension: review
+  text_ja: Humanが全Artifactを読むことを安全性と同一視していない
+  reverse: false
+- id: DG1
+  dimension: delegation
+  text_ja: Work ClassごとにAIへ任せる範囲を変えている
+  reverse: false
+- id: DG2
+  dimension: delegation
+  text_ja: Execution / Evaluation / Approvalを別軸で設計している
+  reverse: false
+- id: DG3
+  dimension: delegation
+  text_ja: 委譲を拡大・縮小する条件がEvidenceで説明できる
+  reverse: false
+- id: DL1
+  dimension: delivery
+  text_ja: AI導入効果をCoding速度だけでなくValue Streamで見ている
+  reverse: false
+- id: DL2
+  dimension: delivery
+  text_ja: CI / Test / Release / RollbackがAIの速度に追随できる
+  reverse: false
+- id: DL3
+  dimension: delivery
+  text_ja: Environment / Provenance / BranchやWork Isolationが再現可能である
+  reverse: false
+- id: RI1
+  dimension: reinvestment
+  text_ja: Repeated Human InterventionをRule / Eval / Skillへ戻している
+  reverse: false
+- id: RI2
+  dimension: reinvestment
+  text_ja: 古くなったGuardrailやRuleを削除・簡素化する仕組みがある
+  reverse: false
+- id: RI3
+  dimension: reinvestment
+  text_ja: 個人の成功をTeam標準・教育・Harnessへ移している
+  reverse: false

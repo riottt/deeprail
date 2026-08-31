@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import zipfile, hashlib, json, shutil, subprocess
+ROOT=Path(__file__).resolve().parents[1]
+subprocess.run([str(ROOT/"scripts/generate")],check=True)
+subprocess.run([str(ROOT/"scripts/check")],check=True)
+out=ROOT/".artifacts"/"dist"; out.mkdir(parents=True,exist_ok=True)
+version="0.16.8rc3"; zpath=out/f"deeprail-{version}.zip"
+exclude={".git",".artifacts","__pycache__","参考資料","build","dist",".pytest_cache"}
+def included(p):
+    rel=p.relative_to(ROOT)
+    if any(part in exclude for part in rel.parts): return False
+    if p.suffix==".pyc": return False
+    if any(part.endswith(".egg-info") for part in rel.parts): return False
+    return p.is_file()
+with zipfile.ZipFile(zpath,"w",zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+    for p in sorted(ROOT.rglob("*")):
+        if included(p): z.write(p,Path(f"deeprail-{version}")/p.relative_to(ROOT))
+sha=hashlib.sha256(zpath.read_bytes()).hexdigest()
+(zpath.with_suffix(".zip.sha256")).write_text(f"{sha}  {zpath.name}\n",encoding="utf-8")
+manifest={"version":version,"archive":zpath.name,"sha256":sha,"status":"release-candidate","public_release":False}
+(out/"release-manifest.json").write_text(json.dumps(manifest,indent=2)+"\n",encoding="utf-8")
+print(zpath)

@@ -1,0 +1,36 @@
+
+site_name: DeepRail
+site_description: AI-native organization and engineering standard
+site_url: https://deeprail.dev/
+docs_dir: .artifacts/site-src
+site_dir: .artifacts/site
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+nav:
+  - Home: README.ja.md
+  - Start:
+      - 10-minute Quickstart: docs/ja/quickstart.md
+      - Diagnostic: docs/ja/diagnostic.md
+      - Problem Map: docs/ja/problem-map.md
+      - Runtime: docs/ja/runtime.md
+      - Evidence Gates: docs/ja/evidence-gates.md
+      - Production Adoption: docs/ja/production-adoption.md
+  - Book:
+      - Book Home: book/ja/README.md
+      - 45 Chapters: book/ja/chapters/README.md
+      - Full Book: book/ja/full-book.md
+      - Source Coverage: book/ja/
+  - Standard: standard/README.md
+  - Workflows: workflows/README.md
+  - English:
+      - English Home: docs/en/README.md
+      - Quickstart: docs/en/quickstart.md

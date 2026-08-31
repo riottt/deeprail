@@ -1,0 +1,59 @@
+id: deeprail-specify
+purpose: Convert agreed meaning into an executable contract with acceptance and evidence
+  requirements.
+module_refs:
+- DR-M05
+inputs:
+- aligned scope
+- decisions
+- constraints
+outputs:
+- specification
+- acceptance criteria
+- evidence requirements
+- non-goals
+required_evidence:
+- traceability from intent to acceptance
+exit_condition: Execution can proceed without inventing missing requirements.
+decision_rights: AI may draft; unresolved normative/architecture decisions escalate.
+failure_return_path:
+- align
+- discover
+next:
+- decompose
+- execute
+evidence_policy:
+  min_count: 1
+  any_of:
+  - - machine_check
+    - human_decision
+    - other
+  allow_self_report: false
+agent_instructions:
+- Write testable acceptance criteria and required evidence.
+- Do not invent missing requirements; escalate them.
+i18n:
+  ja:
+    purpose: 合意した意味を、AcceptanceとEvidence Requirementを持つ実行可能なContractへ変える。
+    inputs:
+    - Aligned Scope
+    - Decision
+    - Constraint
+    outputs:
+    - Specification
+    - Acceptance Criteria
+    - Required Evidence
+    - Non-goals
+    required_evidence:
+    - IntentからAcceptanceまでTraceできる
+    exit_condition: 不足Requirementを勝手に補わずExecutionへ進める。
+    decision_rights: AIはDraftできる。未解決のNormative / Architecture DecisionはEscalateする。
+    failure_return_path:
+    - align
+    - discover
+    next:
+    - decompose
+    - execute
+    agent_instructions:
+    - Test可能なAcceptance CriteriaとRequired Evidenceを書く。
+    - 不足Requirementを創作せずEscalateする。

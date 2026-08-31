@@ -1,0 +1,62 @@
+id: deeprail-decompose
+purpose: Split work into bounded units while preserving dependencies, evidence, and
+  return paths.
+module_refs:
+- DR-M07
+- DR-M19
+inputs:
+- specification
+- risk profile
+- repository topology
+outputs:
+- work units
+- dependencies
+- parallelization plan
+- gates
+required_evidence:
+- every work unit has acceptance/evidence or a parent contract
+exit_condition: Units are independently executable enough for the chosen autonomy
+  profile.
+decision_rights: AI may re-decompose within objective boundaries; objective changes
+  escalate.
+failure_return_path:
+- specify
+- discover
+next:
+- execute
+- decide
+evidence_policy:
+  min_count: 1
+  any_of:
+  - - machine_check
+    - human_decision
+    - other
+  allow_self_report: false
+agent_instructions:
+- Split work by independence, risk and evidence boundaries.
+- Avoid parallelizing work whose coordination cost dominates.
+i18n:
+  ja:
+    purpose: Dependency、Evidence、Failure Return Pathを保ったまま、WorkをBounded Unitへ分割する。
+    inputs:
+    - Specification
+    - Risk Profile
+    - Repository Topology
+    outputs:
+    - Work Unit
+    - Dependency
+    - Parallelization Plan
+    - Gate
+    required_evidence:
+    - 各Work UnitがAcceptance / EvidenceまたはParent Contractを持つ
+    exit_condition: 選択したAutonomy Profileで各Unitを十分に独立実行できる。
+    decision_rights: AIはObjective Boundary内で再分解できる。Objective変更はEscalateする。
+    failure_return_path:
+    - specify
+    - discover
+    next:
+    - execute
+    - decide
+    agent_instructions:
+    - Independence、Risk、Evidence Boundaryで分割する。
+    - Coordination Costが支配的なWorkを無理にParallelizeしない。

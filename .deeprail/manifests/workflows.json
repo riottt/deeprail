@@ -1,0 +1,44 @@
+{
+  "workflows": [
+    {
+      "id": "deeprail-start",
+      "path": "workflows/start/workflow.yaml"
+    },
+    {
+      "id": "deeprail-discover",
+      "path": "workflows/discover/workflow.yaml"
+    },
+    {
+      "id": "deeprail-shape",
+      "path": "workflows/shape/workflow.yaml"
+    },
+    {
+      "id": "deeprail-align",
+      "path": "workflows/align/workflow.yaml"
+    },
+    {
+      "id": "deeprail-specify",
+      "path": "workflows/specify/workflow.yaml"
+    },
+    {
+      "id": "deeprail-decompose",
+      "path": "workflows/decompose/workflow.yaml"
+    },
+    {
+      "id": "deeprail-execute",
+      "path": "workflows/execute/workflow.yaml"
+    },
+    {
+      "id": "deeprail-verify",
+      "path": "workflows/verify/workflow.yaml"
+    },
+    {
+      "id": "deeprail-decide",
+      "path": "workflows/decide/workflow.yaml"
+    },
+    {
+      "id": "deeprail-reinvest",
+      "path": "workflows/reinvest/workflow.yaml"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://deeprail.dev/schemas/project-profile.schema.json",
+  "title": "DeepRail Project Profile",
+  "type": "object",
+  "required": [
+    "deeprail"
+  ],
+  "properties": {
+    "deeprail": {
+      "type": "object",
+      "required": [
+        "version",
+        "project_type",
+        "risk_profile",
+        "language",
+        "autonomy"
+      ],
+      "properties": {
+        "version": {
+          "type": "string"
+        },
+        "project_type": {
+          "enum": [
+            "greenfield",
+            "brownfield",
+            "legacy",
+            "organization"
+          ]
+        },
+        "risk_profile": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "regulated"
+          ]
+        },
+        "runtime": {
+          "type": "string"
+        },
+        "language": {
+          "type": "object",
+          "required": [
+            "communication",
+            "artifacts"
+          ],
+          "properties": {
+            "communication": {
+              "enum": [
+                "ja",
+                "en"
+              ]
+            },
+            "artifacts": {
+              "enum": [
+                "ja",
+                "en"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "autonomy": {
+          "type": "object",
+          "required": [
+            "execution",
+            "evaluation",
+            "approval"
+          ],
+          "properties": {
+            "execution": {
+              "pattern": "^A[0-5]$"
+            },
+            "evaluation": {
+              "pattern": "^EA[0-4]$"
+            },
+            "approval": {
+              "pattern": "^S[1-5]$"
+            }
+          }
+        },
+        "delivery": {
+          "type": "object"
+        },
+        "gates": {
+          "type": "object"
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

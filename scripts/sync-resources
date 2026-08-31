@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import shutil, json, hashlib
+ROOT=Path(__file__).resolve().parents[1]
+DEST=ROOT/"runtime"/"deeprail_runtime"/"resources"
+if DEST.exists(): shutil.rmtree(DEST)
+DEST.mkdir(parents=True)
+for name in ["profiles","workflows","templates","evals","schemas","adapters","diagnostics","maps"]:
+    src=ROOT/name
+    if src.exists(): shutil.copytree(src,DEST/name)
+manifest={}
+for p in sorted(DEST.rglob("*")):
+    if p.is_file(): manifest[str(p.relative_to(DEST))]=hashlib.sha256(p.read_bytes()).hexdigest()
+(DEST/"resource-manifest.json").write_text(json.dumps(manifest,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+print(f"synced {len(manifest)} runtime resources")

@@ -1,0 +1,520 @@
+# DR-M05 — AI Native Development Lifecycle
+
+> Status: **release-candidate v0.16.8**  
+> Creator / Lead Author: **RIO AMADA**
+
+DeepRailは、AI駆動開発を「必ずN個の工程を直列に通る手順」として定義しない。
+
+標準化するのは、**開発において抜けてはいけない責務、前進条件、Evidence、戻り先**である。
+案件の規模・Risk・Method・Autonomy・Operating Contextに応じて、複数責務を一つの作業へ圧縮しても、Gateとして分離してもよい。
+
+## 9.0 Step / Gateは特定Actorに属さない
+
+Lifecycle上のStepやGateは、人間の作業工程を固定するためのものではない。
+
+Stepは、仕事を安全に前へ進めるための制御単位である。最低限、次を持つ。
+
+```text
+Responsibility
+Input
+Output
+Required Evidence
+Transition / Exit Condition
+Failure / Return Path
+```
+
+誰がそのStepを実行し、誰がGateを評価するかはOperating Profileで変わる。
+
+導入初期には、次の形でもよい。
+
+```text
+AI Execute
+↓
+Human Evaluate
+↓
+Human Gate
+```
+
+Evaluation Authorityが上がれば、評価主体を変えられる。
+
+```text
+Execution Agent
+↓
+Review Agent / Automated Eval
+↓
+Human Decision
+```
+
+さらに、対象Work Classで必要なEvidence、Failure Detectability、Rollback、Audit、Policyが成立すれば、通常Caseは人間の個別承認を待たずに進められる。
+
+```text
+Agent Execution
+↓
+Independent Evaluation
+↓
+Policy Gate
+├─ PASS      → Next Step
+├─ RETRY     → Controlled Retry
+└─ EXCEPTION → Human
+```
+
+ここでGateそのものが消えたわけではない。
+**Gateを成立させるEvidenceと、Gateを判断する主体が変わっている。**
+
+> **Stepが残ることと、人間が各Stepに残ることは同じではない。**
+
+DeepRailが固定するのは人間の工程ではなく、**仕事が次へ進んでよい条件**である。
+
+---
+
+## 9.1 Lifecycleの責務モデル
+
+```text
+Intent / Intake
+      ↓
+Discover
+      ↓
+Shape / Visualize
+      ↕
+Align
+      ↓
+Decide / Commit
+      ↓
+Specify / Contract
+      ↓
+Decompose / Plan
+      ↓
+Execute
+      ↓
+Verify / Accept
+      ↓
+Reinvest / Learn
+      ↺
+```
+
+### Intent / Intake
+
+何を、なぜ変えるのかを明らかにする。
+
+主なOutput：
+- Objective / Expected Outcome
+- Customer / User
+- Business Context
+- Initial Scope
+- Constraint
+- Decision Owner
+
+### Discover
+
+要求をそのまま実装へ渡さず、背景・現状・Domain・Codebase・制約・未知を調査する。
+
+主な問い：
+- 本当の課題は何か
+- 現在はどう動いているか
+- 顧客の言葉と既存仕様に矛盾はないか
+- 何が未確定か
+- どのDecisionが後戻りコストを持つか
+
+### Shape / Visualize
+
+抽象要求を、人間同士・人間とAIが**同じ対象を見て判断できる具体物**へ変換する。
+
+```text
+UI開発        → Wireframe / Mock / Prototype / User Flow
+API           → Request / Response Example
+業務設計      → Process / Scenario
+見積・営業    → Plan / Price / Scope / Outcome Image
+組織変革      → Before / After / Target Operating Model
+移行          → Architecture / Migration Scenario
+```
+
+この活動の目的は、Shared Realityを作り続けることにある。
+
+### Align
+
+Shapeされた具体物を用いて顧客・利用者・関係者と認識を合わせる。
+
+```text
+案を提示
+↓
+「違う」
+↓
+Shapeを修正
+↺
+
+「これで合っている」
+↓
+Decisionへ
+```
+
+### Decide / Commit
+
+何を採用するか、誰が決めたか、何をまだ決めないかを確定する。
+
+- Decision
+- Rationale
+- Alternatives
+- Risk
+- Unknown
+- Reversibility
+- Decision Owner
+
+高Risk DecisionはDecision Packetを使用してよい。
+
+### Specify / Contract
+
+合意済み内容をAIとチームが推測なしで実行できる契約へ変換する。
+
+- Requirement
+- Acceptance Criteria
+- Constraint
+- Non-goal
+- Interface
+- Error Strategy
+- Security / Data Boundary
+- Evidence Requirement
+
+> **仕様は「認識を合わせる最初の道具」ではなく、認識が合った内容を実行可能な契約として固定する道具である。**
+
+### Decompose / Plan
+
+Objective / Epic / Feature / Issue / Agent Taskへ仕事を分解し、Dependency・Risk・Context・Gateを配置する。
+分解は人間の手作業だけに限定せず、AIがRubricを使って生成・再分解してよい。
+
+### Execute
+
+AI / Humanが合意済みContractの範囲内で実行する。
+AIは実装中に未知・Risk増加・Architecture境界を発見した場合、勝手にObjectiveを変えず、Re-decompositionまたはEscalationへ移る。
+
+### Verify / Accept
+
+Self-reportではなく、Machine Check / Observed Behavior / Human Decisionを用いて、期待したOutcomeへ到達したかを判断する。
+
+### Reinvest / Learn
+
+単なる「記録」ではない。
+今回得た成果・判断・失敗・人間介入を、次回のAIと組織がより良く働ける状態へ戻す。
+
+```text
+Current Truth
+├ Specification
+├ API / DB / Architecture
+├ ADR
+└ Operations
+
+Reusable Learning
+├ Rule
+├ Skill
+├ Eval
+├ Agent Contract
+├ Gate
+└ Harness
+
+Organization
+├ Standard
+├ Training
+├ Decision Policy
+└ Operating Model
+```
+
+---
+
+## 9.2 Lifecycleは一本道ではない
+
+代表的な戻りを標準化する。
+
+```text
+Execute
+↓
+未知の仕様を発見
+↓
+Discover / Align
+↓
+Specify更新
+↓
+Re-decompose
+↓
+Execute
+```
+
+```text
+Verify
+↓
+Acceptance不一致
+├ 実装問題 → Execute
+├ Spec問題 → Specify
+├ 認識問題 → Align
+└ Objective変更 → Requirement ChangeとしてIntakeへ
+```
+
+**AIがWorkを再分解できることと、AIがGoalを勝手に再定義できることは別である。**
+
+---
+
+## 9.3 小規模では圧縮し、高Riskでは分離する
+
+### Lightweight例
+
+```text
+Intent + Discover + Specify
+↓
+Execute
+↓
+Verify
+↓
+Reinvest
+```
+
+### Standard例
+
+```text
+Intent
+↓
+Discover
+↓
+Shape / Align
+↓
+Specify
+↓
+Decompose
+↓
+Execute
+↓
+Verify
+↓
+Reinvest
+```
+
+### High Risk / Enterprise例
+
+```text
+Intent
+↓
+Research / Discover
+↓
+Alignment Gate
+↓
+Requirement / Architecture Decision
+↓
+Specification
+↓
+Decomposition
+↓
+Planning Gate
+↓
+Execution
+↓
+Verification
+↓
+Acceptance Gate
+↓
+Release
+↓
+Reinvestment
+```
+
+工程数ではなく、**責務が消えていないこと**を確認する。
+
+---
+
+## 9.4 Evaluation / EvidenceはLifecycle全体を横断するControl Plane
+
+Reviewは最後に一度だけ行う工程ではない。
+
+```text
+                 EVALUATION / EVIDENCE
+────────────────────────────────────────────
+Intent
+Discover
+Shape / Align
+Specify
+Decompose
+Execute
+Verify
+Reinvest
+────────────────────────────────────────────
+```
+
+例：
+- Requirement Review
+- Alignment Decision
+- Architecture Review
+- Work Breakdown Review
+- Automated Test / Eval
+- PR/MR Review
+- Acceptance Review
+- Release Decision
+- Management Review
+
+人間のReview負荷を下げる方法はReviewを消すことではなく、**適切な抽象度・適切な時点へReviewを移すこと**である。
+
+---
+
+## 9.5 実装前の認識合わせを標準責務として持つ
+
+実装前に要求・設計・Domain理解を十分に掘り下げ、未確定事項を実装工程へ持ち込まない。
+
+主な内容：
+- Codebaseから回答できる事項を調査する
+- Domain Vocabularyを確定する
+- 既存のDomain ModelやDocumentとの矛盾を検出する
+- Acceptance Criteriaを確認する
+- UI / API / DB / 外部IF等を必要に応じて可視化する
+- Test Seamを確認する
+- 後戻りコストが高いDecisionを明文化する
+- 次責務が推測なしで開始できる状態を作る
+
+確定情報はSession内だけに残さずSource of Truthへ反映する。
+
+### 9.5.1 Domain理解は「実装前に受け取る完成資料」ではない
+
+複雑なDomainでは、最初から完全なRequirement / Domain Modelが存在するとは限らない。Domain Expert、Product、Engineer、AIがResearch / Design / Implementation / Feedbackを往復しながら、理解とModelを更新する。
+
+一度ヒアリングして要件を書けば終わり、とはならない。Problem、Domain、Scenario、Acceptanceは、実装やFeedbackで何度も更新される。ここまで含めて、**Shared Realityを育て続けるKnowledge Work**になる。
+
+```text
+Domain / Problemを調べる
+↓
+言葉・Rule・例外を仮説化する
+↓
+Scenario / Model / Prototype / Codeへ表す
+↓
+違和感・矛盾・Unknownを発見する
+↓
+Domain理解を更新する
+↺
+```
+
+AIはResearch / Comparison / Draft / Model候補の生成を大きく加速できる。ただし、AIの提案を採用するには、Teamが「何が妥当か」を判断できるだけのProblem / Domain理解とEvaluation Criteriaを持つ必要がある。
+
+ここでもHuman-only責務を固定しない。AI CapabilityとEvaluation Reliabilityが上がればDomain分析・Model提案・Consistency Check等も委譲できるが、**何を正とするかを外部化し、Evidenceで更新できる構造**は維持する。
+
+### 9.5.1.1 Why — なぜ実装が速くなるほどDomain理解の価値が上がるのか
+
+最初に、一つだけ言っておきたい。
+
+**AIで速くなったのは、形にすることだ。何を正しいとするかまで、自動的に分かるようになったわけではない。**
+
+架空のFlowDeskでは、依頼は一文から始まる。
+
+> **「承認者が不在のとき、代理の人が承認できるようにしてほしい。」**
+
+短い。実装できそうにも見える。
+
+AIに渡せば、代理承認用の項目を足し、APIを作り、画面に操作を増やし、Testまで書ける。コードを書くことだけを見れば、仕事はかなり前へ進んだように見える。
+
+ところが、この一文にはまだ答えが入っていない。
+
+代理とは一時的な権限なのか。誰が「不在」を決めるのか。高額な申請も代理してよいのか。代理設定が途中で変わったら、すでに流れている申請はどうするのか。監査には、実際にボタンを押した人だけを残せばよいのか。それとも、誰の権限を使ったのかまで残すのか。
+
+コードを書けば、この問いにも答えが出るわけではない。
+
+むしろ怖いのは、AIが止まらずに形にしてしまうことだ。曖昧な要求が、曖昧なままではなく、もっともらしい画面やAPIやData Modelとして固定される。
+
+**曖昧さが消えるのではない。曖昧さに実装という形が付く。**
+
+AI以前の開発にも同じ問題はあった。ただ、実装そのものに時間がかかっていた。設計し、書き、Reviewし、試すまでの途中で、「そもそもこの理解で合っているか」と人が立ち止まる時間が偶然入り込むことがあった。
+
+生成が速くなると、その余白はあてにできない。
+
+では、上流工程を重くして、巨大な仕様書を完成させてからAIへ渡せば安心か。
+
+そうとも限らない。
+
+複雑な仕事では、作ってみて初めて分かることがある。Prototypeを触った利用者が「そういう意味ではない」と気づく。Testを書いて初めて例外が見える。既存Codeを調べたAIが、文書にはなかったRuleを見つけることもある。
+
+実装は、理解の終点ではない。理解を進めるための材料にもなる。
+
+この往復を、Knowledge Loopと呼ぶ。
+
+```text
+Problem / Domainを調べる
+↓
+言葉・Rule・Scenarioを仮説にする
+↓
+Prototype / Code / Testへ表す
+↓
+現実とのズレ・例外・Unknownが見つかる
+↓
+Shared Realityを更新する
+↓
+Specification / Acceptance / Workを更新する
+↺
+```
+
+このLoopを、人だけの仕事に固定する必要もない。AIは既存資料とCodeを調べ、用語の候補を整理し、矛盾を探し、Scenarioを増やし、Model案を比較できる。能力と評価の仕組みが上がれば、Domain分析のかなりの部分も任せられる。
+
+ただし、候補を作る能力と、何を採用するかを決められる状態は別である。
+
+100個の案を出せても、何をもって正しいOutcomeとするかが曖昧なら、選べない。だからShared Realityが必要になる。
+
+Shared Realityは、最新の仕様書が一冊あることではない。人とAIが、問題、言葉、Rule、制約、決定、Acceptanceについて、次の仕事を推測だけで始めなくてよい程度に理解を揃えている状態である。Vocabulary、Scenario、Decision Record、Specification、Test、CodeといったContext Assetは、その状態を作り直すために使う。
+
+FlowDeskでも、最初の画面が動いただけでは終わらない。高額申請を代理承認してよいかが未決なら、そのUnknownを見える場所へ置く。Decision Ownerを決める。Riskの低い範囲では先に試す。そして、分かったことを仕様とAcceptanceへ戻す。
+
+全部決めてから作るのでもない。分からないまま作り切るのでもない。
+
+**速く作れるからこそ、理解と実装を短く往復する。**
+
+`Discover → Shape / Visualize → Align → Decide → Specify` は、AIにコードを書かせる前の儀式ではない。仕事の意味を更新し続けるための活動である。実装から新しい事実が返ってきたら、何度でも戻る。
+
+実務で見るべきことは、難しくない。
+
+- 同じ言葉を、関係者とAIが同じ意味で使っているか
+- Ruleと例外を分けて説明できるか
+- まだ決まっていないことが見えているか
+- 何をもって正しいとするかが外へ出ているか
+- 作って分かったことを、どこへ戻すか決まっているか
+
+最初の一文へ戻ろう。
+
+「代理の人が承認できるようにしてほしい」。
+
+AIが速ければ、この一文からすぐに機能は作れる。だからこそ、その速さに引っ張られて、一文の意味まで決まった気になってはいけない。
+
+> **AIが実装Costを下げるほど、「何を作るのか」「何を正解とするのか」を更新し続ける能力の価値が上がる。**
+
+### 9.5.2 ContextはAI専用PromptではなくTeam Development Assetである
+
+ここをShared Reality / Context AssetのCanonical Homeとする。以降の章では、この定義を前提として使う。
+
+ここで `Shared Reality` と `Context Asset` を分離する。
+
+- **Shared Reality:** Human / AIがProblem・Domain・Decision・Acceptanceについて十分な共通理解を持つ状態
+- **Context Asset:** その状態を作り直し、検証し、別Session / 別Memberへ再利用するために外部化された情報
+
+次をAIへの一時入力だけにしない。
+
+- 仕様
+- Domain Vocabulary / 用語
+- Business Rule
+- Constraint
+- Architecture / Design Intent
+- Decision / Rationale
+- Acceptance Criteria
+- Known Unknown
+
+HumanとAIが同じSource of Truthを参照できるようにし、変更時にはReinvest / Learnで更新する。
+
+> **Context整備はAIの回答精度向上だけではなく、Teamの開発判断を共有・再現するための投資である。**
+
+AIがCodingやDraftを高速化しても、Domain理解・Modeling・Knowledge Crunchingの責務は消えない。DeepRailでは、これらを `Knowledge Loop / Shared Reality / Domain Modeling` として、実装速度とは別に維持・更新する。
+
+---
+
+## 9.6 Workflow / Skill Chainの位置づけ
+
+特定のOSS、Skill名、Agent RuntimeをDeepRailの工程名にはしない。
+外部の実装例は次の抽象責務へマッピングして利用する。
+
+| 実装パターン | DeepRail上の責務 |
+|---|---|
+| Interview / research workflow | Discover |
+| Mock / prototype generation | Shape / Visualize |
+| Spec generation | Specify / Contract |
+| Ticket generation | Decompose / Plan |
+| Coding agent | Execute |
+| Code review / test agent | Verify |
+| Documentation / rule feedback | Reinvest / Learn |
+
+外部実装が廃止・変更されても、上位標準が壊れない構造を維持する。

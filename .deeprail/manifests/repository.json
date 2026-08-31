@@ -1,0 +1,64 @@
+{
+  "repository": {
+    "name": "DeepRail",
+    "phase": "public-release-candidate-final",
+    "candidate_version": "0.16.8rc3",
+    "release_status": "public-release-candidate-final",
+    "standard_content_status": "candidate"
+  },
+  "brand": {
+    "ja": "AIネイティブな仕事・開発・組織を設計するオープン標準。",
+    "en": "The open standard for designing AI-native work, software, and organizations."
+  },
+  "authors": [
+    {
+      "name": "RIO AMADA",
+      "role": "Creator / Lead Author"
+    }
+  ],
+  "entrypoints": {
+    "book": "book/ja/README.md",
+    "quickstart": "docs/ja/quickstart.md",
+    "standard": "standard/README.md",
+    "workflows": "workflows/README.md",
+    "diagnostic": "docs/ja/diagnostic.md",
+    "runtime": "docs/ja/runtime.md"
+  },
+  "validation": {
+    "command": "./scripts/check",
+    "generate_command": "./scripts/generate",
+    "doctor_command": "./scripts/deeprail doctor --project <project>"
+  },
+  "human_decisions_required": [
+    "public_release",
+    "canonical_promotion",
+    "stable_module_id_change",
+    "breaking_schema_change",
+    "license_change",
+    "trademark_change",
+    "governance_change"
+  ],
+  "baseline": {
+    "current_public_kernel_semantics": "preserved",
+    "stable_module_ids": "DR-M01..DR-M25",
+    "candidate_projection": "v0.16.8"
+  },
+  "engineering_readiness": {
+    "runtime_execution_plane": "implemented",
+    "evidence_gate": "implemented",
+    "agent_adapters": [
+      "claude",
+      "generic"
+    ],
+    "audit_chain": "implemented",
+    "diagnostic": "implemented",
+    "ci": "implemented",
+    "packaged_resources": "implemented"
+  },
+  "public_projection": {
+    "author": "RIO AMADA",
+    "self_contained": true,
+    "local_sources_required": false,
+    "core_semantics_vendor_neutral": true
+  }
+}

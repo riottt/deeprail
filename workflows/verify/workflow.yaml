@@ -1,0 +1,67 @@
+id: deeprail-verify
+purpose: Evaluate the outcome using approved evidence rather than executor self-report.
+module_refs:
+- DR-M17
+inputs:
+- artifact/change
+- acceptance criteria
+- evidence contract
+outputs:
+- evidence packet
+- evaluation result
+- unknowns
+required_evidence:
+- machine checks when relevant
+- observed behavior when relevant
+- independent evaluation appropriate to risk
+exit_condition: Evidence is sufficient to pass, retry, reject, or escalate.
+decision_rights: EA level controls whether AI may only evaluate, recommend, or issue
+  GO within policy.
+failure_return_path:
+- execute
+- specify
+- discover
+next:
+- decide
+- execute
+evidence_policy:
+  min_count: 2
+  required_types:
+  - machine_check
+  any_of:
+  - - observed_behavior
+    - independent_evaluation
+    - human_decision
+  verified_required: true
+  independent_required: true
+  allow_self_report: false
+agent_instructions:
+- Evaluate independently from the executor where policy requires it.
+- Prefer machine checks + observed behavior; disclose untested areas.
+i18n:
+  ja:
+    purpose: Executorの自己申告ではなく、承認可能なEvidenceを使ってOutcomeを評価する。
+    inputs:
+    - Artifact / Change
+    - Acceptance Criteria
+    - Evidence Contract
+    outputs:
+    - Evidence Packet
+    - Evaluation Result
+    - Unknown
+    required_evidence:
+    - 必要なMachine Check
+    - 必要なObserved Behavior
+    - Riskに応じたIndependent Evaluation
+    exit_condition: PASS / RETRY / REJECT / ESCALATEを判断できるEvidenceが揃っている。
+    decision_rights: EA Levelにより、AIが評価のみ・Recommendation・Policy内GOのどこまで行えるかを決める。
+    failure_return_path:
+    - execute
+    - specify
+    - discover
+    next:
+    - decide
+    - execute
+    agent_instructions:
+    - Policyが求める場合、Executorと独立して評価する。
+    - Machine Check + Observed Behaviorを優先し、未検証領域を開示する。

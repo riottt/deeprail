@@ -1,0 +1,21 @@
+{
+  "lifecycle": [
+    "raw",
+    "reference",
+    "candidate",
+    "structured",
+    "reviewed",
+    "canonical"
+  ],
+  "current": {
+    "candidate_corpus": "0.16.8rc3",
+    "promotion": "human-decision-required",
+    "public_release": false
+  },
+  "rules": [
+    "candidate content never self-promotes to canonical",
+    "stable module identity changes require human decision",
+    "semantic conflicts become NEEDS DECISION",
+    "book projection and runtime projection do not redefine normative semantics"
+  ]
+}

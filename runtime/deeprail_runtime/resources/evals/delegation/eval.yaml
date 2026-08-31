@@ -1,0 +1,8 @@
+id: eval-delegation-readiness
+checks:
+- work class is bounded
+- failure modes are detectable enough
+- rollback/recovery is defined where required
+- evidence reliability is known
+- accountability owner is known
+- permission scope is explicit

@@ -1,0 +1,24 @@
+{
+  "work_id": "example",
+  "intent": "bounded change",
+  "evidence": [
+    {
+      "type": "machine_check",
+      "description": "tests pass",
+      "verified": true,
+      "actor": "tool",
+      "independent": true,
+      "result": "pass"
+    },
+    {
+      "type": "independent_evaluation",
+      "description": "review agent evaluated acceptance",
+      "verified": true,
+      "actor": "ai",
+      "independent": true,
+      "result": "pass"
+    }
+  ],
+  "unknowns": [],
+  "decision": "pass"
+}

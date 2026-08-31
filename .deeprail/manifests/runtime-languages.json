@@ -1,0 +1,16 @@
+{
+  "communication_languages": [
+    "ja",
+    "en"
+  ],
+  "artifact_output_languages": [
+    "ja",
+    "en"
+  ],
+  "defaults": {
+    "communication": "ja",
+    "artifacts": "ja"
+  },
+  "resolver": "runtime/deeprail_runtime/language.py",
+  "independent_from_standard_projection": true
+}

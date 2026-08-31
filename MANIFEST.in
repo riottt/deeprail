@@ -1,0 +1,3 @@
+recursive-include runtime/deeprail_runtime/resources *
+include README.md
+include LICENSE

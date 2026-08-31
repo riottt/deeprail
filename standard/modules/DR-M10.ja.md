@@ -1,0 +1,325 @@
+# DR-M10 — SCM・Repository運用ガイド
+
+> Status: **release-candidate v0.16.8**  
+> Creator / Lead Author: **RIO AMADA**
+
+## 14.1 SCM / Collaboration Adapter共通標準
+
+製品名ではなくGit運用から定義する。
+
+- Branch命名
+- Worktree利用
+- Commit粒度
+- PR/MR粒度
+- Reviewer
+- Approval
+- CI
+- Merge方式
+- Conflict
+- Release Branch
+- Protected Branch
+- Issueリンク
+- Auto Merge条件
+
+---
+
+## 14.2 SCM Adapter
+
+例：
+
+```text
+Work Item → Issue / Work Item
+Review → Pull Request
+Automation → CI/CD Automation
+Protection → Branch Protection / Rulesets
+```
+
+---
+
+## 14.3 Collaboration Adapter
+
+例：
+
+```text
+Work Item → Issue / Work Item
+Review → Merge Request
+Automation → CI/CD Automation
+Protection → Protected Branch
+```
+
+---
+
+## 14.4 Branch / Worktree
+
+AI並列開発ではWorktreeを積極的に検討する。
+
+```text
+Developer A
+└ Issue A
+  └ Worktree A
+    └ Agent A
+
+Developer B
+└ Issue B
+  └ Worktree B
+    └ Agent B
+```
+
+共通ファイルを複数Agentが同時編集する場合は、所有範囲か統合順を決める。
+
+---
+
+## 14.5 PR/MR標準フロー
+
+```text
+Issue
+↓
+Branch / Worktree
+↓
+Implementation
+↓
+Self Review
+↓
+Test
+↓
+Living Document Check
+↓
+PR / MR
+↓
+CI
+↓
+Independent Review
+↓
+Approval
+↓
+Merge
+```
+
+---
+
+## 14.6 PR/MR本文の共通項目
+
+```markdown
+## Why
+なぜこの変更を行うか
+
+## What
+何を変更したか
+
+## Impact
+影響範囲
+
+## Verification
+何を確認したか
+
+## Documents
+更新した正本
+
+## Risks
+残存リスク・既知制約
+
+## Work Item
+関連Epic / Feature / Issue
+```
+
+AIにPR/MR本文を生成させる場合も、この構造をHarnessから強制する。
+
+---
+
+## 14.7 AI時代のPR/MR Reviewを4層へ分ける
+
+AI出力を人間が一律に全量Reviewする方式を標準にはしない。
+
+### Layer 1: Deterministic Check
+
+- Build
+- Type Check
+- Lint
+- Unit Test
+- Integration Test
+- Security Scan
+- Policy Check
+
+機械的に判定できるものはCI/Hookへ寄せる。
+
+### Layer 2: AI Standards Review
+
+確認対象：
+
+- Repository規約
+- Coding Standards
+- Architecture Rule
+- 既知のCode Smell
+- 不要Scope拡大
+
+### Layer 3: AI Spec Review
+
+確認対象：
+
+- Issue/Specを満たすか
+- Acceptance Criteria漏れ
+- Scope Creep
+- 仕様との差
+- Testが仕様を証明しているか
+
+StandardsとSpecは混ぜずに別軸で判定する。
+
+### Layer 4: Human Decision Review
+
+人間は主に次を見る。
+
+- 意図
+- Business Decision
+- Architecture上の重大判断
+- Risk
+- Security
+- 例外
+- Testで証明できない性質
+- AIがEscalationした論点
+
+Harness成熟後は、人間のReviewを「全Diffの逐語確認」から「重要DecisionとEvidence確認」へ移行できる領域を増やす。
+
+ただし高Risk変更、Production影響、Security、Data Migration等は別PolicyでHuman Reviewを維持する。
+
+### 14.7.1 Code Reviewを目的から手段へ戻す
+
+DeepRailは「Code Reviewをしないこと」を成熟の証拠にしない。HumanがCodeを見たかどうかもKPIにしない。
+
+先に問うのは、従来Code Reviewで何を検出しようとしていたかである。
+
+| 検出したいもの | Primary Control候補 |
+|---|---|
+| Requirement / Acceptance不適合 | Spec Eval / Acceptance Test / Traceability |
+| Regression | Unit / Integration / E2E / Differential Test |
+| Coding Rule違反 | Lint / Static Analysis / Policy Check |
+| Security Risk | SAST / DAST / Security Eval / Human Security Decision |
+| Architecture逸脱 | Architecture Rule / Independent AI Review / Human Decision |
+| Maintainability Risk | Metrics / Smell Detection / Sampling Review |
+| Unknown / Low-detectability Risk | Human Deep Review / Experiment / Escalation |
+
+この分解の後に、Human Code Reviewが最良のControlであるWork ClassではCodeを見る。そうでないWork Classでは、Machine / AI EvaluationをPrimaryにしHumanはDecision / Exceptionへ移る。
+
+Review Interfaceは、まず次の順で見る。
+
+```text
+Decision / Outcome
+↓
+Evidence / Risk / Unknowns
+↓
+High-risk Diff
+↓
+Raw Diff / Code / Log
+```
+
+とする。Raw Artifactは隠さない。ただし**最初に読ませるInterfaceにはしない**。
+
+> **Code Reviewをなくすのではない。Code Reviewによって担保していた品質を、より検証可能なEvidence Systemへ再設計する。**
+
+---
+
+## 14.8 Review Packet
+
+人間が巨大Diffから設計意図を発掘しなくて済むよう、PR/MRにReview Packetを添付する。
+
+```markdown
+## Intent
+何を成立させる変更か
+
+## Decisions
+実装前に確定した主要判断
+
+## Spec Evidence
+どのAcceptance Criteriaをどの変更/Testが満たすか
+
+## High-risk Diff
+人間に特に見てほしい箇所
+
+## Automated Evidence
+Build / Test / CI / Security結果
+
+## Deviations
+当初計画から変わった点
+
+## Open Questions
+未解決事項
+```
+
+Review Packet自体もAI生成可能だが、内容はIssue・Spec・Test・Diffから追跡可能でなければならない。
+
+### Review Packet v2 — 「未検証」と「計画外判断」を隠さない
+
+Review Packetは成功内容だけをまとめない。最低限、次のキーを持つ。
+
+```text
+Intent
+Decisions
+Spec Evidence
+High-risk Diff
+Automated Evidence
+what_untested
+Agent-initiated Decisions
+Deviations / Rulings
+Open Questions
+```
+
+`what_untested` は空でもキーを残す。キーが無い状態と「未検証なし」を区別する。
+
+AgentがDesign / Contract確定後に独自判断でScope・Implementation Strategyを変更した場合、`Agent-initiated Decisions`へ記録し、Riskに応じてIndependent Evaluation / Human DecisionへEscalateする。
+
+### 差し戻しは「不合格通知」ではなく次のWork Contractである
+
+```text
+Rework Package
+├ Failed condition + Evidence
+├ Remaining work — 何を積めば合格に届くか
+├ causeClass — Failure Routing
+└ Re-evaluation scope — 前回不合格 + 新規diff
+```
+
+「ダメでした」だけでExecutorへ返さない。Failure Routingによって戻り先を決め、再評価範囲を限定する。
+
+### Review PacketとDecision Packetの関係
+
+Review PacketはDecision PacketのEngineering / PR向けProfileである。
+
+```text
+Decision Packet
+├ Epic Decision Packet
+├ Feature Acceptance Packet
+├ Issue Gate Packet
+├ PR / MR Review Packet
+├ Release Decision Packet
+├ Security Decision Packet
+└ Transformation Decision Packet
+```
+
+正本となるHuman Evaluation Interfaceの原則はDR-M17に置く。
+
+---
+
+## 14.X 集中型VCS・Legacy SCM Adapter
+
+SCM / Collaboration PlatformはDeepRail Coreの必須要件ではない。
+
+集中型VCSを正本とする環境では、次の順で選択する。
+
+```text
+1. Native profileでControl Objectiveを満たせるか
+2. 不足する場合だけGit Bridgeを置く
+3. Bridgeの二重正本Riskが高ければReduced Parallelismへ縮退
+```
+
+集中型VCS Adapterは現時点では未検証であり、
+「対応済み」とは記述しない。
+
+Validation対象：
+
+- sync drift
+- revision ↔ evidence traceability
+- reviewability
+- parallelism benefit
+- bridge operational cost
+- rollback
+- auditability
+
+成立性が確認されるまで `experimental / unverified` とする。

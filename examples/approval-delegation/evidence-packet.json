@@ -1,0 +1,20 @@
+{
+  "work_id": "EXAMPLE-PROXY-001",
+  "intent": "Bounded proxy approval with expiry and audit identity",
+  "evidence": [
+    {
+      "type": "machine_check",
+      "description": "4 approval authorization/expiry/revocation tests pass",
+      "location": "app/test_approval.py"
+    },
+    {
+      "type": "observed_behavior",
+      "description": "Returned record distinguishes actor and on_behalf_of",
+      "location": "app/approval.py"
+    }
+  ],
+  "unknowns": [
+    "Cross-region clock skew is intentionally outside this minimal example"
+  ],
+  "decision": "pass"
+}

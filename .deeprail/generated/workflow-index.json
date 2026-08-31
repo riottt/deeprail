@@ -1,0 +1,214 @@
+{
+  "workflows": [
+    {
+      "id": "deeprail-align",
+      "path": "workflows/align/workflow.yaml",
+      "module_refs": [
+        "DR-M05",
+        "DR-M14"
+      ],
+      "next": [
+        "specify",
+        "decide"
+      ],
+      "evidence_policy": {
+        "min_count": 1,
+        "any_of": [
+          [
+            "human_decision",
+            "other"
+          ]
+        ],
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-decide",
+      "path": "workflows/decide/workflow.yaml",
+      "module_refs": [
+        "DR-M17",
+        "DR-M19"
+      ],
+      "next": [
+        "reinvest",
+        "execute"
+      ],
+      "evidence_policy": {
+        "min_count": 0,
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-decompose",
+      "path": "workflows/decompose/workflow.yaml",
+      "module_refs": [
+        "DR-M07",
+        "DR-M19"
+      ],
+      "next": [
+        "execute",
+        "decide"
+      ],
+      "evidence_policy": {
+        "min_count": 1,
+        "any_of": [
+          [
+            "machine_check",
+            "human_decision",
+            "other"
+          ]
+        ],
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-discover",
+      "path": "workflows/discover/workflow.yaml",
+      "module_refs": [
+        "DR-M05",
+        "DR-M14"
+      ],
+      "next": [
+        "shape",
+        "align",
+        "specify"
+      ],
+      "evidence_policy": {
+        "min_count": 1,
+        "any_of": [
+          [
+            "observed_behavior",
+            "machine_check",
+            "other"
+          ]
+        ],
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-execute",
+      "path": "workflows/execute/workflow.yaml",
+      "module_refs": [
+        "DR-M05",
+        "DR-M19"
+      ],
+      "next": [
+        "verify"
+      ],
+      "evidence_policy": {
+        "min_count": 1,
+        "any_of": [
+          [
+            "machine_check",
+            "observed_behavior",
+            "other"
+          ]
+        ],
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-reinvest",
+      "path": "workflows/reinvest/workflow.yaml",
+      "module_refs": [
+        "DR-M13",
+        "DR-M14",
+        "DR-M21"
+      ],
+      "next": [
+        "start"
+      ],
+      "evidence_policy": {
+        "min_count": 0,
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-shape",
+      "path": "workflows/shape/workflow.yaml",
+      "module_refs": [
+        "DR-M05"
+      ],
+      "next": [
+        "align",
+        "specify"
+      ],
+      "evidence_policy": {
+        "min_count": 1,
+        "any_of": [
+          [
+            "observed_behavior",
+            "other"
+          ]
+        ],
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-specify",
+      "path": "workflows/specify/workflow.yaml",
+      "module_refs": [
+        "DR-M05"
+      ],
+      "next": [
+        "decompose",
+        "execute"
+      ],
+      "evidence_policy": {
+        "min_count": 1,
+        "any_of": [
+          [
+            "machine_check",
+            "human_decision",
+            "other"
+          ]
+        ],
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-start",
+      "path": "workflows/start/workflow.yaml",
+      "module_refs": [
+        "DR-M05",
+        "DR-M19"
+      ],
+      "next": [
+        "discover",
+        "shape",
+        "specify"
+      ],
+      "evidence_policy": {
+        "min_count": 0,
+        "allow_self_report": false
+      }
+    },
+    {
+      "id": "deeprail-verify",
+      "path": "workflows/verify/workflow.yaml",
+      "module_refs": [
+        "DR-M17"
+      ],
+      "next": [
+        "decide",
+        "execute"
+      ],
+      "evidence_policy": {
+        "min_count": 2,
+        "required_types": [
+          "machine_check"
+        ],
+        "any_of": [
+          [
+            "observed_behavior",
+            "independent_evaluation",
+            "human_decision"
+          ]
+        ],
+        "verified_required": true,
+        "independent_required": true,
+        "allow_self_report": false
+      }
+    }
+  ]
+}

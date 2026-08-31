@@ -1,0 +1,20 @@
+{
+  "review_axes": [
+    "semantic",
+    "evidence",
+    "language",
+    "runtime",
+    "usability",
+    "governance"
+  ],
+  "human_decisions_required": [
+    "canonical_promotion",
+    "public_release",
+    "stable_module_id_change",
+    "breaking_schema_change",
+    "license_change",
+    "trademark_change",
+    "governance_change"
+  ],
+  "default_decision_owner": "RIO AMADA"
+}

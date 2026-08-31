@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import shutil
+ROOT=Path(__file__).resolve().parents[1]; dst=ROOT/".artifacts"/"site-src"
+if dst.exists(): shutil.rmtree(dst)
+dst.mkdir(parents=True)
+for rel in ["book","docs","standard","workflows"]:
+    shutil.copytree(ROOT/rel,dst/rel)
+for rel in ["README.ja.md","README.md"]:
+    shutil.copy2(ROOT/rel,dst/rel)
+print(dst)

@@ -1,0 +1,39 @@
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deeprail-framework"
+version = "0.16.8rc3"
+description = "DeepRail — AI-native organization and engineering standard, workflow runtime, and evidence-gated operating system"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "RIO AMADA"}]
+dependencies = [
+  "PyYAML>=6.0",
+  "jsonschema>=4.18"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License"
+]
+
+[project.optional-dependencies]
+dev = ["build>=1.2"]
+docs = ["mkdocs-material>=9,<10"]
+
+[project.scripts]
+deeprail = "deeprail_runtime.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "runtime"}
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["runtime"]
+
+[tool.setuptools.package-data]
+deeprail_runtime = ["resources/**/*"]

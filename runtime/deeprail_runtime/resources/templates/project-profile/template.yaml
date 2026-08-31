@@ -1,0 +1,21 @@
+deeprail:
+  version: 0.16.8-candidate
+  project_type: brownfield
+  risk_profile: medium
+  runtime: generic-agent
+  language:
+    communication: ja
+    artifacts: ja
+  autonomy:
+    execution: A3
+    evaluation: EA1
+    approval: S4
+  delivery:
+    scm: git
+    ci: present
+    automated_tests: expected
+  gates:
+    requirement: human
+    verification: human
+    release: human
+  constraints: []

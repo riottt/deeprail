@@ -1,0 +1,76 @@
+{
+  "rules": [
+    {
+      "id": "REPO-001",
+      "name": "required-entrypoints",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-002",
+      "name": "stable-module-set",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-003",
+      "name": "profile-schema",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-004",
+      "name": "workflow-contract",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-005",
+      "name": "no-language-forked-workflows",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-006",
+      "name": "author-attribution",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-007",
+      "name": "public-projection-purity",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    },
+    {
+      "id": "REPO-008",
+      "name": "runtime-language-independence",
+      "mode": "block",
+      "implemented_by": "tests/test_runtime_language.py"
+    },
+    {
+      "id": "REPO-009",
+      "name": "work-transition-policy",
+      "mode": "block",
+      "implemented_by": "tests/test_runtime_engine.py"
+    },
+    {
+      "id": "REPO-010",
+      "name": "executable-evidence-eval",
+      "mode": "block",
+      "implemented_by": "tests/test_evals.py"
+    },
+    {
+      "id": "REPO-011",
+      "name": "golden-path-runnable",
+      "mode": "block",
+      "implemented_by": "tests/test_example_app.py"
+    },
+    {
+      "id": "REPO-012",
+      "name": "no-cache-in-distribution",
+      "mode": "block",
+      "implemented_by": "scripts/check"
+    }
+  ]
+}

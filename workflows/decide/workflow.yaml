@@ -1,0 +1,51 @@
+id: deeprail-decide
+purpose: Turn evidence into a clear transition decision, exception, or escalation.
+module_refs:
+- DR-M17
+- DR-M19
+inputs:
+- evidence packet
+- risk profile
+- approval strength
+outputs:
+- decision packet
+- transition state
+required_evidence:
+- decision is traceable to evidence and unresolved unknowns
+exit_condition: PASS, RETRY, REJECT, DEFER, or ESCALATE is explicit.
+decision_rights: A / EA / S determine actor and approval strength; they are not collapsed.
+failure_return_path:
+- verify
+- specify
+next:
+- reinvest
+- execute
+evidence_policy:
+  min_count: 0
+  allow_self_report: false
+agent_instructions:
+- Convert evidence into PASS/RETRY/REJECT/DEFER/ESCALATE.
+- Respect EA/S/Risk policy for the decision actor.
+i18n:
+  ja:
+    purpose: Evidenceを、明示的なTransition Decision / Exception / Escalationへ変える。
+    inputs:
+    - Evidence Packet
+    - Risk Profile
+    - Approval Strength
+    outputs:
+    - Decision Packet
+    - Transition State
+    required_evidence:
+    - DecisionがEvidenceとUnknownへTraceできる
+    exit_condition: PASS / RETRY / REJECT / DEFER / ESCALATEが明示されている。
+    decision_rights: A / EA / SでActorとApproval Strengthを決める。3軸を1つに潰さない。
+    failure_return_path:
+    - verify
+    - specify
+    next:
+    - reinvest
+    - execute
+    agent_instructions:
+    - Evidenceを明示的なDecisionへ変える。
+    - Decision ActorはEA / S / Risk Policyを守る。

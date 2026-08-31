@@ -1,0 +1,59 @@
+id: deeprail-start
+purpose: Establish the work intent, operating profile, and the next responsibility
+  without assuming a fixed human-owned process.
+module_refs:
+- DR-M05
+- DR-M19
+inputs:
+- request
+- project profile
+- current repository state
+outputs:
+- work intent
+- initial unknowns
+- selected next workflow
+required_evidence:
+- request captured
+- project profile resolved
+exit_condition: Intent and bounded scope are clear enough to choose the next responsibility.
+decision_rights: Escalate objective changes or unbounded scope to the accountable
+  human owner.
+failure_return_path:
+- ask for missing intent
+- discover
+next:
+- discover
+- shape
+- specify
+evidence_policy:
+  min_count: 0
+  allow_self_report: false
+agent_instructions:
+- Confirm intent and project profile.
+- Do not infer a hidden objective; surface unknowns.
+i18n:
+  ja:
+    purpose: 仕事のIntent、Operating Profile、次に担う責務を確認し、固定されたHuman工程を前提にせず開始条件を作る。
+    inputs:
+    - 依頼
+    - Project Profile
+    - 現在のRepository状態
+    outputs:
+    - Work Intent
+    - 初期Unknown
+    - 次に使うWorkflow
+    required_evidence:
+    - 依頼が記録されている
+    - Project Profileが解決されている
+    exit_condition: Intentと境界が、次の責務を選べる程度に明確である。
+    decision_rights: Objective変更や境界不明のScopeはAccountable HumanへEscalateする。
+    failure_return_path:
+    - 不足Intentを確認する
+    - discoverへ進む
+    next:
+    - discover
+    - shape
+    - specify
+    agent_instructions:
+    - IntentとProject Profileを確認する。
+    - 隠れたObjectiveを推測せず、Unknownとして表に出す。

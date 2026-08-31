@@ -1,0 +1,6 @@
+id: eval-implementation-outcome
+checks:
+- implementation matches accepted contract
+- required tests/checks pass
+- observed behavior matches acceptance
+- unverified areas are disclosed

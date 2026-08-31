@@ -1,0 +1,55 @@
+id: deeprail-align
+purpose: Establish Shared Reality around the proposed shape, boundaries, decisions,
+  and unknowns.
+module_refs:
+- DR-M05
+- DR-M14
+inputs:
+- shape artifact
+- stakeholder feedback
+outputs:
+- agreed understanding
+- open decisions
+- rejected assumptions
+required_evidence:
+- explicit agreement or recorded unresolved decision
+exit_condition: The accepted scope can be converted into an execution contract.
+decision_rights: Decision owner approves semantic commitments.
+failure_return_path:
+- discover
+- shape
+next:
+- specify
+- decide
+evidence_policy:
+  min_count: 1
+  any_of:
+  - - human_decision
+    - other
+  allow_self_report: false
+agent_instructions:
+- Surface disagreements, unknowns and non-goals explicitly.
+- Record semantic commitments as a decision/evidence item.
+i18n:
+  ja:
+    purpose: 提案されたShape、Boundary、Decision、UnknownについてShared Realityを成立させる。
+    inputs:
+    - Shape Artifact
+    - Stakeholder Feedback
+    outputs:
+    - 合意された理解
+    - Open Decision
+    - 棄却されたAssumption
+    required_evidence:
+    - 明示的な合意、または未解決Decisionの記録
+    exit_condition: 受け入れたScopeを実行Contractへ変換できる。
+    decision_rights: Semantic CommitmentはDecision Ownerが承認する。
+    failure_return_path:
+    - discover
+    - shape
+    next:
+    - specify
+    - decide
+    agent_instructions:
+    - Disagreement、Unknown、Non-goalを明示する。
+    - Semantic CommitmentをDecision / Evidenceとして残す。

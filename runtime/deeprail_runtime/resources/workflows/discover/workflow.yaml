@@ -1,0 +1,63 @@
+id: deeprail-discover
+purpose: Reduce unknowns by inspecting domain, codebase, constraints, current behavior,
+  and decision boundaries.
+module_refs:
+- DR-M05
+- DR-M14
+inputs:
+- work intent
+- repository/domain context
+outputs:
+- facts
+- unknowns
+- constraints
+- decision candidates
+required_evidence:
+- source inspection
+- observed current behavior when relevant
+exit_condition: The next responsibility can start without relying on avoidable guesses.
+decision_rights: AI may research and propose; semantic conflict or objective change
+  escalates.
+failure_return_path:
+- start
+- discover
+next:
+- shape
+- align
+- specify
+evidence_policy:
+  min_count: 1
+  any_of:
+  - - observed_behavior
+    - machine_check
+    - other
+  allow_self_report: false
+agent_instructions:
+- Inspect repository/domain sources before proposing changes.
+- Record observed facts separately from assumptions.
+i18n:
+  ja:
+    purpose: Domain、Codebase、Constraint、現行挙動、Decision Boundaryを調査し、避けられる推測を減らす。
+    inputs:
+    - Work Intent
+    - Repository / Domain Context
+    outputs:
+    - 確認済みFact
+    - Unknown
+    - Constraint
+    - Decision Candidate
+    required_evidence:
+    - Sourceを実際に確認したEvidence
+    - 必要な場合は現行挙動を観測したEvidence
+    exit_condition: 避けられるGuessに依存せず次の責務へ進める。
+    decision_rights: AIは調査と提案を行える。Semantic ConflictやObjective変更はEscalateする。
+    failure_return_path:
+    - start
+    - discover
+    next:
+    - shape
+    - align
+    - specify
+    agent_instructions:
+    - 提案より先にRepository / Domain Sourceを確認する。
+    - Observed FactとAssumptionを分けて記録する。

@@ -1,0 +1,56 @@
+id: deeprail-reinvest
+purpose: Return reusable learning to the project so the next execution changes.
+module_refs:
+- DR-M13
+- DR-M14
+- DR-M21
+inputs:
+- decision
+- human interventions
+- failures
+- unknowns
+- successful controls
+outputs:
+- reinvestment candidates
+- rule/eval/workflow updates
+- deletions/simplifications
+required_evidence:
+- candidate linked to observed friction or outcome
+exit_condition: Learning is either reinvested, intentionally deferred, or rejected
+  with rationale.
+decision_rights: Changes to stable rules / schemas / governance follow their own change
+  contract.
+failure_return_path:
+- reinvest
+next:
+- start
+evidence_policy:
+  min_count: 0
+  allow_self_report: false
+agent_instructions:
+- Capture repeated friction as reusable Rule/Skill/Eval/Workflow/Harness change.
+- Also consider deletion of obsolete controls.
+i18n:
+  ja:
+    purpose: Human Intervention、Failure、Unknown、成功したControlを次の実行へ再利用できる形に戻す。
+    inputs:
+    - Decision
+    - Human Intervention
+    - Failure
+    - Unknown
+    - Successful Control
+    outputs:
+    - Reinvestment Candidate
+    - Rule / Eval / Workflow Update
+    - 削除 / 簡素化Candidate
+    required_evidence:
+    - Candidateが観測されたFriction / OutcomeへTraceできる
+    exit_condition: LearningがReinvest / Defer / Rejectのいずれかとして理由付きで処理される。
+    decision_rights: Stable Rule / Schema / Governance変更は各Change Contractに従う。
+    failure_return_path:
+    - reinvest
+    next:
+    - start
+    agent_instructions:
+    - Repeated FrictionをRule / Skill / Eval / Workflow / Harnessへ戻す。
+    - 古くなったControlを削除できないかも検討する。

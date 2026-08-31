@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DeepRail Workflow",
+  "type": "object",
+  "required": [
+    "id",
+    "purpose",
+    "inputs",
+    "outputs",
+    "required_evidence",
+    "exit_condition",
+    "decision_rights",
+    "failure_return_path",
+    "next",
+    "evidence_policy",
+    "agent_instructions"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^deeprail-[a-z0-9-]+$"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "module_refs": {
+      "type": "array",
+      "items": {
+        "pattern": "^DR-M\\d{2}$"
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "required_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "exit_condition": {
+      "type": "string"
+    },
+    "decision_rights": {
+      "type": "string"
+    },
+    "failure_return_path": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "agent_instructions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "evidence_policy": {
+      "type": "object",
+      "required": [
+        "min_count",
+        "allow_self_report"
+      ],
+      "properties": {
+        "min_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "allow_self_report": {
+          "type": "boolean"
+        },
+        "required_types": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "any_of": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1
+          }
+        },
+        "verified_required": {
+          "type": "boolean"
+        },
+        "independent_required": {
+          "type": "boolean"
+        },
+        "allow_failed_evidence": {
+          "type": "boolean"
+        }
+      }
+    },
+    "i18n": {
+      "type": "object",
+      "properties": {
+        "ja": {
+          "type": "object"
+        },
+        "en": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

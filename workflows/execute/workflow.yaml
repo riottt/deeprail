@@ -1,0 +1,60 @@
+id: deeprail-execute
+purpose: Perform bounded work under the current contract without silently redefining
+  the objective.
+module_refs:
+- DR-M05
+- DR-M19
+inputs:
+- work unit
+- specification
+- project profile
+outputs:
+- artifact/change
+- execution notes
+- new unknowns
+required_evidence:
+- execution artifact exists
+- required checks invoked where applicable
+exit_condition: Produced artifact is ready for independent verification.
+decision_rights: Escalate new high-risk decisions, contract violations, or scope expansion.
+failure_return_path:
+- decompose
+- specify
+- discover
+next:
+- verify
+evidence_policy:
+  min_count: 1
+  any_of:
+  - - machine_check
+    - observed_behavior
+    - other
+  allow_self_report: false
+agent_instructions:
+- Modify only the bounded work unit.
+- Run the declared checks and record artifacts/evidence.
+i18n:
+  ja:
+    purpose: Objectiveを密かに再定義せず、現在のContract内でBounded Workを実行する。
+    inputs:
+    - Work Unit
+    - Specification
+    - Project Profile
+    outputs:
+    - Artifact / Change
+    - Execution Note
+    - 新しいUnknown
+    required_evidence:
+    - Execution Artifactが存在する
+    - 必要なCheckが実行されている
+    exit_condition: Artifactが独立Verificationへ渡せる。
+    decision_rights: High-risk Decision、Contract違反、Scope拡張はEscalateする。
+    failure_return_path:
+    - decompose
+    - specify
+    - discover
+    next:
+    - verify
+    agent_instructions:
+    - Bounded Work Unitだけを変更する。
+    - 宣言されたCheckを実行しArtifact / Evidenceを記録する。

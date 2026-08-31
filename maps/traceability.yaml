@@ -1,0 +1,34 @@
+book_to_runtime:
+- book: Ch.15-19
+  problem: Shared Reality / executable contract
+  modules:
+  - DR-M05
+  - DR-M14
+  workflows:
+  - discover
+  - shape
+  - align
+  - specify
+- book: Ch.20-25
+  problem: decomposition / delegation
+  modules:
+  - DR-M07
+  - DR-M19
+  workflows:
+  - decompose
+  - execute
+- book: Ch.26-27,35
+  problem: evaluation / human attention
+  modules:
+  - DR-M17
+  - DR-M19
+  workflows:
+  - verify
+  - decide
+- book: Ch.38,44-45
+  problem: learning / organizational transfer
+  modules:
+  - DR-M21
+  - DR-M25
+  workflows:
+  - reinvest

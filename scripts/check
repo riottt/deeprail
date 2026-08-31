@@ -1,0 +1,120 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json, sys, re, yaml, jsonschema, hashlib
+ROOT=Path(__file__).resolve().parents[1]; errors=[]
+def err(x): errors.append(x)
+required=["README.md","README.ja.md","book/ja/full-book.md","book/ja/chapters/README.md","docs/ja/quickstart.md","docs/ja/diagnostic.md","standard/README.md","workflows/README.md","pyproject.toml","AUTHORSHIP.md","diagnostics/questions.yaml","diagnostics/problem-map.yaml","maps/traceability.yaml",".github/workflows/ci.yml",".github/workflows/docs.yml",".github/workflows/release-build.yml",".deeprail/manifests/repository.json",".deeprail/manifests/content.json",".deeprail/manifests/languages.json",".deeprail/manifests/runtime-languages.json",".deeprail/manifests/canonicalization.json",".deeprail/manifests/review.json",".deeprail/manifests/enforcement-ledger.json"]
+for rel in required:
+    if not (ROOT/rel).exists(): err("missing: "+rel)
+content=json.loads((ROOT/".deeprail/manifests/content.json").read_text(encoding="utf-8")); ids=[m["id"] for m in content["modules"]]; expected=[f"DR-M{i:02d}" for i in range(1,26)]
+if ids!=expected: err("stable module ids mismatch")
+for mid in expected:
+    if not (ROOT/f"standard/modules/{mid}.ja.md").exists(): err("missing module: "+mid)
+chapters=list((ROOT/"book/ja/chapters").glob("ch??.md"))
+if len(chapters)!=45: err(f"expected 45 chapter files, found {len(chapters)}")
+# Profiles
+schema=json.loads((ROOT/"schemas/project-profile.schema.json").read_text(encoding="utf-8"))
+for p in sorted((ROOT/"profiles").glob("*.yaml")):
+    try: jsonschema.validate(yaml.safe_load(p.read_text(encoding="utf-8")),schema)
+    except Exception as e: err(f"profile schema {p.name}: {e}")
+# Workflow contract and refs
+wf_schema=json.loads((ROOT/"schemas/workflow.schema.json").read_text(encoding="utf-8")); workflow_names=set()
+for p in sorted((ROOT/"workflows").glob("*/workflow.yaml")):
+    data=yaml.safe_load(p.read_text(encoding="utf-8")); workflow_names.add(p.parent.name)
+    try: jsonschema.validate(data,wf_schema)
+    except Exception as e: err(f"workflow schema {p}: {e}")
+    for mid in data.get("module_refs",[]):
+        if mid not in expected: err(f"unknown module ref {mid} in {p}")
+    if "evidence_policy" not in data: err(f"missing evidence_policy in {p}")
+for p in sorted((ROOT/"workflows").glob("*/workflow.yaml")):
+    data=yaml.safe_load(p.read_text(encoding="utf-8"))
+    for nxt in data.get("next",[]):
+        if nxt not in workflow_names: err(f"unknown next workflow {nxt} in {p}")
+for banned in [ROOT/"workflows/ja",ROOT/"workflows/en"]:
+    if banned.exists(): err("language-forked workflow directory forbidden: "+str(banned.relative_to(ROOT)))
+# Attribution / public provenance
+for rel in ["README.md","README.ja.md",".deeprail/manifests/repository.json"]:
+    if "RIO AMADA" not in (ROOT/rel).read_text(encoding="utf-8"): err("missing author attribution: "+rel)
+patterns=[
+    r"External reference:",
+    r"外部参考(?:R\d+|として)",
+    r"\[R\d+(?:[-–]\d+)?[^\]]*\]",
+    r"^> \*\*[^:]{1,40} Rule:\*\*",
+    r"^> この章は.*Reading Projectionです。",
+    r"^\s*-\s+[A-Z][A-Za-z0-9_. -]+,\s+[“\"]",
+    r"公開した.*(?:実利用分析|研究|調査)",
+    r"正式製本",
+    r"最終製本",
+    r"製本用Draft",
+    r"Canonical MD",
+    r"Manuscript Pack",
+    r"\[Integrated v[0-9.]",
+    r"限定的な外部事例",
+    r"外部知見や実践例",
+]
+for p in list((ROOT/"standard").rglob("*.md"))+list((ROOT/"docs").rglob("*.md"))+list((ROOT/"book").rglob("*.md")):
+    txt=p.read_text(encoding="utf-8")
+    for pat in patterns:
+        if re.search(pat,txt,re.I|re.M): err(f"public provenance pattern in {p.relative_to(ROOT)}: {pat}")
+
+
+# Book / Standard should remain conceptually vendor-neutral.
+conceptual_vendor_patterns = [
+    r"\bGitLab\b", r"\bJira\b", r"\bRedmine\b", r"\bSVN\b",
+    r"\bCopilot\b", r"\bCodex\b", r"\bOpenAI\b", r"\bAnthropic\b", r"\bBMAD\b",
+    r"`CLAUDE\.md`"
+]
+for p in list((ROOT/"standard").rglob("*.md")) + list((ROOT/"book").rglob("*.md")):
+    txt = p.read_text(encoding="utf-8")
+    for pat in conceptual_vendor_patterns:
+        if re.search(pat, txt, re.I|re.M):
+            err(f"conceptual vendor/reference leakage in {p.relative_to(ROOT)}: {pat}")
+
+for rel in ["book/ja/source-coverage.md","BUILD-REPORT.md","RELEASE-READINESS.md"]:
+    if (ROOT/rel).exists(): err("publication-internal file present: "+rel)
+if (ROOT/"imports").exists():
+    err("imports/ must not exist in the public distribution")
+
+# Distribution cleanliness
+for p in ROOT.rglob("*"):
+    if ".artifacts" in p.parts: continue
+    # Python cache is ignored by Git and excluded by build-dist; it is not a source-contract failure.
+    if p.is_file() and "参考資料" in p.parts: err("local source leaked into distribution")
+if (ROOT/"imports").exists():
+    for p in (ROOT/"imports").rglob("*"):
+        if p.is_file() and "raw" in p.parts: err("raw import leaked: "+str(p.relative_to(ROOT)))
+
+
+# Book / Standard should remain conceptually vendor-neutral.
+conceptual_vendor_patterns = [
+    r"\bGitLab\b", r"\bJira\b", r"\bRedmine\b", r"\bSVN\b",
+    r"\bCopilot\b", r"\bCodex\b", r"\bOpenAI\b", r"\bAnthropic\b", r"\bBMAD\b",
+    r"`CLAUDE\.md`"
+]
+for p in list((ROOT/"standard").rglob("*.md")) + list((ROOT/"book").rglob("*.md")):
+    txt = p.read_text(encoding="utf-8")
+    for pat in conceptual_vendor_patterns:
+        if re.search(pat, txt, re.I|re.M):
+            err(f"conceptual vendor/reference leakage in {p.relative_to(ROOT)}: {pat}")
+
+for rel in ["book/ja/source-coverage.md","BUILD-REPORT.md","RELEASE-READINESS.md"]:
+    if (ROOT/rel).exists(): err("publication-internal file present: "+rel)
+if (ROOT/"imports").exists():
+    err("imports/ must not exist in the public distribution")
+
+# Packaged resources synchronized
+manifest_path=ROOT/"runtime/deeprail_runtime/resources/resource-manifest.json"
+if not manifest_path.exists(): err("runtime resource manifest missing; run ./scripts/generate")
+else:
+    manifest=json.loads(manifest_path.read_text(encoding="utf-8")); rr=manifest_path.parent
+    for rel,digest in manifest.items():
+        p=rr/rel
+        if not p.exists() or hashlib.sha256(p.read_bytes()).hexdigest()!=digest: err("runtime resource drift: "+rel)
+# Diagnostic complete answers IDs unique
+q=yaml.safe_load((ROOT/"diagnostics/questions.yaml").read_text(encoding="utf-8")); qids=[x["id"] for x in q["questions"]]
+if len(qids)!=len(set(qids)) or len(qids)<12: err("diagnostic question set invalid")
+if errors:
+    print("DeepRail check: FAIL")
+    for e in errors: print("-",e)
+    sys.exit(1)
+print("DeepRail check: PASS")

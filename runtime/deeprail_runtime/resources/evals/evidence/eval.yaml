@@ -1,0 +1,6 @@
+id: eval-evidence-minimum
+checks:
+- executor self-report is not the only completion basis
+- required machine checks are attached when applicable
+- observed behavior exists for user-visible behavior when applicable
+- unknowns and residual risk are explicit

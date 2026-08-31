@@ -1,0 +1,404 @@
+{
+  "modules": [
+    {
+      "id": "DR-M01",
+      "title_ja": "AI駆動開発 基本方針",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M01.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M02",
+      "title_ja": "ハーネス設計原則",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M02.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M03",
+      "title_ja": "ハーネス構成・利用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M03.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M04",
+      "title_ja": "環境構築・セットアップガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M04.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M05",
+      "title_ja": "AI Native Development Lifecycle",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M05.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M06",
+      "title_ja": "開発ループ設計ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M06.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M07",
+      "title_ja": "規模判定・Work Item分割ルール",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M07.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M08",
+      "title_ja": "開発手法別 AI駆動適用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M08.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M09",
+      "title_ja": "チーム・役割運用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M09.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M10",
+      "title_ja": "SCM・Repository運用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M10.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M11",
+      "title_ja": "外部ツール連携ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M11.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M12",
+      "title_ja": "AI実行基盤・モデル選定ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M12.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M13",
+      "title_ja": "AI資産・Harness変更管理ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M13.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M14",
+      "title_ja": "生きたドキュメント・知識管理ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M14.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M15",
+      "title_ja": "AI時代の人材育成・習熟・実践ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M15.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M16",
+      "title_ja": "セキュリティ・AIガバナンスガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M16.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M17",
+      "title_ja": "品質評価・Harness Evalsガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M17.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M18",
+      "title_ja": "Release・Production運用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M18.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M19",
+      "title_ja": "AI権限委譲・自律化運用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M19.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M20",
+      "title_ja": "環境・実行基盤 状態管理ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M20.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M21",
+      "title_ja": "Enforcement・標準観測ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M21.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M22",
+      "title_ja": "AI-Native Organization Operating Modelガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M22.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M23",
+      "title_ja": "経営・AI導入・成熟度運用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M23.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M24",
+      "title_ja": "要求供給・受入運用ガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M24.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    },
+    {
+      "id": "DR-M25",
+      "title_ja": "AI導入推進・組織移行マネジメントガイド",
+      "semantic_revision": 1,
+      "status": "candidate",
+      "projections": {
+        "ja": {
+          "status": "synced",
+          "path": "standard/modules/DR-M25.ja.md"
+        },
+        "en": {
+          "status": "missing",
+          "path": null
+        }
+      }
+    }
+  ]
+}

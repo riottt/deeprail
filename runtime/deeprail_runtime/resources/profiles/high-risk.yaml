@@ -1,0 +1,25 @@
+deeprail:
+  version: 0.16.8-candidate
+  project_type: legacy
+  risk_profile: regulated
+  runtime: generic-agent
+  language:
+    communication: ja
+    artifacts: ja
+  autonomy:
+    execution: A1
+    evaluation: EA0
+    approval: S5
+  delivery:
+    scm: managed
+    ci: required
+    automated_tests: required
+  gates:
+    requirement: human
+    architecture: human
+    verification: human
+    release: human
+  constraints:
+  - regulated
+  - auditability
+  - rollback-required

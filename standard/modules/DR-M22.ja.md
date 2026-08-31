@@ -1,0 +1,244 @@
+# DR-M22 — AI-Native Organization Operating Modelガイド
+
+> Status: **release-candidate v0.16.8**  
+> Creator / Lead Author: **RIO AMADA**
+
+**レイヤ:** Organization / Operating Model  
+**目的:** HumanとAIが混在する組織を、Role・Decision・Authority・Context・Evaluation・Learningの構造として設計する。
+
+## M22.1 Strategy-to-Execution
+
+```text
+Strategy / Intent
+↓
+Portfolio / Initiative
+↓
+Demand / Requirement
+↓
+Operating Model
+↓
+Engineering / Business Execution
+↓
+Evidence
+↓
+Outcome
+↓
+Organizational Learning
+↓
+Next Strategy
+```
+
+上位Intentと下位Executionを別システムにしない。
+
+## M22.2 Human / AI Role Model
+
+Roleは肩書きではなく、次の契約で定義する。
+
+```text
+Purpose
+Input
+Output
+Decision rights
+Allowed actions
+Forbidden actions
+Required context
+Escalation
+Evaluation
+Owner
+```
+
+Agentを増やすことをOrganization Designとみなさない。
+決定論的処理はScript / Rule / Toolへ寄せ、Role分離が必要な場合だけAgent化する。
+
+## M22.3 Decision Rights
+
+最低限、次の責務を明示する。
+
+- Human Owner
+- Decision Owner
+- Approval Owner
+- Escalation Owner
+- Standard Owner
+- Harness Owner
+- Eval Owner
+- Risk Owner
+- Environment / Operations Owner
+
+M0-M1では兼任を許容できる。
+成熟度上昇時には、Riskと負荷に応じて分離する。
+
+## M22.4 Decision Ledger
+
+重要判断は結果だけでなく、
+
+```text
+Decision
+Context
+Options
+Rationale
+Owner
+Evidence
+Scope
+Expiry / Revisit condition
+```
+
+を残す。
+
+「採用しなかった判断」も組織学習の対象である。
+
+## M22.5 Authority / Permission
+
+AutonomyとPermissionを分離する。
+
+```text
+Autonomy
+= どこまで自分で進めてよいか
+
+Permission
+= 何を実行してよいか
+```
+
+高AutonomyであってもProduction WriteやExternal Sendを持たせる必要はない。
+
+## M22.6 Escalation
+
+Escalationは「人へ返す」では不十分。
+
+```text
+Cause Class
+↓
+Destination Owner
+↓
+Expected decision
+↓
+SLA / timeout
+↓
+Fallback
+```
+
+まで定義する。
+
+## M22.7 Organizational Source of Truth
+
+組織知は、
+
+```text
+Canonical Source
++
+Declared Projection
++
+Drift Check
+```
+
+を基本形とする。
+
+コピーを禁止するのではなく、**未宣言コピー**を禁止する。
+
+## M22.8 Organizational Memory
+
+```text
+Feedback / Incident / Decision
+↓
+Classification
+↓
+Rewrite
+↓
+Policy / Rule / Skill / Process / Eval / Living Document
+↓
+Capability
+```
+
+共有は単純Exportではなく、再利用可能な形への**清書・一般化**として行う。
+
+## M22.9 Policy Architecture
+
+Organization PolicyもEnforcement Ledgerへ接続する。
+
+```text
+Policy
+├ machine block
+├ machine nudge
+├ human review
+├ measurement
+└ declared-only
+```
+
+すべてを機械強制できるふりをしない。
+
+## M22.10 Capability Model
+
+Capabilityは「Toolを契約した」「Skillファイルがある」では成立しない。
+
+```text
+Available
+→ Discoverable
+→ Usable
+→ Measured
+→ Maintained
+→ Transferable
+```
+
+までをCapability Lifecycleに含める。
+
+### M22.10-A Experience × AI-Native Capability — 採用・配置・評価を年次だけで決めない
+
+AI Native Organizationでは、`経験年数` と `AIを使えるか` を一つの軸へ潰さない。少なくとも次を分離して見る。
+
+```text
+Domain / Technical Experience
+AI Delegation Capability
+Evaluation / Evidence Capability
+Work Class Fit
+Context / Harness Leverage
+Accountability / Escalation Judgment
+```
+
+このProfileは人事Ratingそのものではない。**誰に、どのWork Classを、どのDelegation Envelopeで任せるか**を決めるOperating Inputである。
+
+組織は次のような誤った単純化を避ける。
+
+- `新卒だからAI Nativeで強い` と決めつける
+- `SeniorだからAIを使えば必ず最強になる` と決めつける
+- AI利用量をPerformance評価へ直結する
+- AIが生成したOutput量を個人Productivityへ直結する
+- JuniorがAIで速くなったことを、Mentoring不要の根拠にする
+
+採用・配置・育成では、年次より具体的に次を観測する。
+
+```text
+Outcomeを定義できるか
+仕事をVerifiable Unitへ分けられるか
+AIへScope / Permission / Evidenceを渡せるか
+AI Outputの弱点を説明できるか
+Unknownを隠さずEscalateできるか
+経験をRule / Context / Eval / Harnessへ外部化できるか
+```
+
+> **AI時代の強い人材とは、AIなしで何でも一人でできる人でも、AIへ何でも投げられる人でもない。Human + AI Systemとして、より大きなOutcomeを安全に完遂できる人である。**
+
+この観点では、AI Nativeな新人がBounded Workで早く立ち上がることと、AI Nativeな経験者がTacit Knowledgeを増幅してより大きなDecisionを担うことは両立する。
+
+## M22.11 Organizational Evals
+
+評価対象例：
+
+- Decision Quality
+- Execution Quality
+- Escalation Accuracy
+- Human Intervention
+- Rework
+- Lead Time
+- Knowledge Reuse
+- Policy Compliance
+- Risk Incident
+- Business Outcome
+
+AI Workerの評価を、そのまま人間の人事評価へ直訳しない。
+
+## M22.12 Organizational Learning
+
+学習Loop自体も監視対象とする。
+
+振り返り・提案制度・自動学習が存在しても、使われていない / 壊れている / 改善へ到達しないならCapabilityではない。
+
+---
