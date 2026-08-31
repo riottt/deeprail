@@ -1,7 +1,6 @@
 # DR-M24 — 要求供給・受入運用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 **レイヤ:** Organization ↔ Operating Model ↔ Engineering  
 **主な読者:** Product / Business / PM / PO / Engineering Lead / Architect  

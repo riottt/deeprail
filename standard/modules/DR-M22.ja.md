@@ -1,7 +1,6 @@
 # DR-M22 — AI-Native Organization Operating Modelガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 **レイヤ:** Organization / Operating Model  
 **目的:** HumanとAIが混在する組織を、Role・Decision・Authority・Context・Evaluation・Learningの構造として設計する。

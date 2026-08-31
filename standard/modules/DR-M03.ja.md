@@ -1,7 +1,6 @@
 # DR-M03 — ハーネス構成・利用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 7.1 AI資産の責務
 

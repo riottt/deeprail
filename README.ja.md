@@ -2,7 +2,7 @@
 
 **AIネイティブな仕事・開発・組織を設計するオープン標準。**
 
-> **v0.16.8 Public Release Candidate Final / unreleased** — 公開用の文章・Runtime・Validationを統合した最終候補です。Stable Canonical Promotionは別途Governance Decisionとして扱います。
+> **v0.16.8 — 正式公開版** — 日本語Standard ProjectionをCanonicalとして公開します。英語のNormative ModuleはPreviewとして公開します。
 
 ## 5つの入口
 
@@ -95,15 +95,17 @@ CI / Docs Build / Release Build workflows are included under `.github/workflows/
 
 ## Release Status
 
-- Candidate corpus: v0.16.8
-- Runtime/packaging version: `0.16.8rc3`
+- Public release: **v0.16.8**
+- Canonical Standard projection: Japanese (`ja`), DR-M01〜DR-M25
+- English Standard projection: Preview; normative module translation is planned for a later release
 - Stable Module IDs: DR-M01〜DR-M25
 - Japanese Standard projection: present
-- English Standard projection: first-class but incomplete
-- Public release: **not yet declared**
-- Canonical promotion: **not yet declared**
+- English Standard projection: Preview / incomplete
+- Runtime communication and artifact output: Japanese and English
+- Software license: [`LICENSE`](LICENSE)
+- Documentation license: [`LICENSE-DOCUMENTATION`](LICENSE-DOCUMENTATION)
 
-This final release candidate is self-contained for publication and use. Stable canonical promotion remains a governance decision.
+This release is self-contained for publication and use. Future changes to canonical semantics, stable IDs, and release scope remain governance decisions.
 
 
 ## Authorship

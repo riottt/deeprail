@@ -1,8 +1,8 @@
 # Release Contract
 
-Current state: **v0.16.8rc1 / unreleased release candidate**.
+Current state: **v0.16.8 / released public version**.
 
-Engineering readiness may pass without declaring a stable public release.
+Engineering readiness, the public-release decision, and the canonical Standard decision are recorded separately. The v0.16.8 formal Standard scope is Japanese; English normative modules remain Preview.
 
 The following remain explicit Human Decisions owned by **RIO AMADA**:
 - Public Release
@@ -12,4 +12,4 @@ The following remain explicit Human Decisions owned by **RIO AMADA**:
 - Governance-model changes
 - Breaking stable ID / schema changes
 
-CI tag builds create release artifacts but do not publish them automatically.
+CI tag builds create and attach release artifacts. A published version is immutable; fixes require a new patch or minor release.

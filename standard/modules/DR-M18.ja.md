@@ -1,7 +1,6 @@
 # DR-M18 — Release・Production運用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 22.1 開発完了とRelease完了を分ける
 

@@ -8,9 +8,11 @@
     "canonical"
   ],
   "current": {
-    "candidate_corpus": "0.16.8rc3",
-    "promotion": "human-decision-required",
-    "public_release": false
+    "version": "0.16.8",
+    "promotion": "canonical",
+    "public_release": true,
+    "decision_owner": "RIO AMADA",
+    "decision_record": ".deeprail/manifests/review.json"
   },
   "rules": [
     "candidate content never self-promotes to canonical",

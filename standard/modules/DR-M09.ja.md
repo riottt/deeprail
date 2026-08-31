@@ -1,7 +1,6 @@
 # DR-M09 — チーム・役割運用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 本章は「AI用の新しい役職名」を作る章ではない。
 Scrum Master、Development Lead、Tech Lead、Engineering Lead、Sub Lead等の既存Roleに割り当て可能な**AI-Native Team Leadership Function**を定義する。

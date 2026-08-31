@@ -1,5 +1,5 @@
 deeprail:
-  version: 0.16.8-candidate
+  version: 0.16.8
   project_type: brownfield
   risk_profile: medium
   runtime: generic-agent

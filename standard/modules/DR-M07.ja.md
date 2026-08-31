@@ -1,7 +1,6 @@
 # DR-M07 — 規模判定・Work Item分割ルール
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 本章は、人間がEpic / Feature / Issue / Taskを手作業で完全分割するための手順書ではない。
 

@@ -1,5 +1,5 @@
 deeprail:
-  version: 0.16.8-candidate
+  version: 0.16.8
   project_type: legacy
   risk_profile: regulated
   runtime: generic-agent

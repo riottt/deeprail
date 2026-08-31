@@ -1,7 +1,6 @@
 # DR-M21 — Enforcement・標準観測ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 **レイヤ:** Execution Harness / Governance  
 **目的:** 宣言したRule・Policy・Gateが実際にどこまで強制され、その強制機構自体が正常に動いているかを監査可能にする。

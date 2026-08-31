@@ -1,7 +1,6 @@
 # DR-M19 — AI権限委譲・自律化運用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 この章が、AI駆動チーム開発の長期的な到達点を定める。
 

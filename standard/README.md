@@ -2,7 +2,9 @@
 
 DeepRailは1つのStandardを、Stable Module IDで管理します。
 
-現在このZIPでは **v0.16.8 Candidate / Unreleased** として、DR-M01〜DR-M25の日本語Projectionを収録しています。英語はFirst-Class Official Projectionですが、未翻訳Moduleは `missing` として扱います。
+この公開版では **v0.16.8** の日本語ProjectionをCanonicalとして収録しています。英語はFirst-Class Preview Projectionで、未翻訳Moduleは正式版スコープ外です。
+
+日本語ProjectionのStable Module IDはDR-M01〜DR-M25です。Runtimeの通信言語・Artifact出力言語（`ja | en`）とは独立して管理します。
 
 通常の利用者はStandard ID順に読む必要はありません。
 

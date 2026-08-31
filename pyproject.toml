@@ -5,20 +5,23 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "deeprail-framework"
-version = "0.16.8rc3"
+version = "0.16.8"
 description = "DeepRail — AI-native organization and engineering standard, workflow runtime, and evidence-gated operating system"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE", "LICENSE-DOCUMENTATION"]
 authors = [{name = "RIO AMADA"}]
 dependencies = [
   "PyYAML>=6.0",
   "jsonschema>=4.18"
 ]
 classifiers = [
-  "Development Status :: 4 - Beta",
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License"
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13"
 ]
 
 [project.optional-dependencies]

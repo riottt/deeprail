@@ -9,17 +9,35 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
       - run: pip install -e .[dev]
-      - run: ./scripts/generate && ./scripts/check
-      - run: python -m unittest discover -s tests -v
+      - run: python scripts/release-audit
       - run: python -m build
       - run: ./scripts/build-dist
-      - uses: actions/upload-artifact@v4
+      - name: Verify ZIP checksum
+        working-directory: .artifacts/dist
+        run: sha256sum -c deeprail-*.zip.sha256
+      - name: Assemble release assets
+        run: |
+          mkdir -p .artifacts/release-assets
+          cp dist/* .artifacts/release-assets/
+          cp .artifacts/dist/* .artifacts/release-assets/
+      - name: Publish GitHub Release assets
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --title "DeepRail $GITHUB_REF_NAME" --notes-file RELEASE_NOTES_v0.16.8.md --latest
+          fi
+          gh release upload "$GITHUB_REF_NAME" .artifacts/release-assets/* --repo "$GITHUB_REPOSITORY" --clobber
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: deeprail-release-candidate
-          path: .artifacts/dist/
+          name: deeprail-release-${{ github.ref_name }}
+          path: .artifacts/release-assets/

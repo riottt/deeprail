@@ -1,7 +1,6 @@
 # DR-M15 — AI時代の人材育成・習熟・実践ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 19.1 人材育成の目的
 

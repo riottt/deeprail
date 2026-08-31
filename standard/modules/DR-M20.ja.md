@@ -1,7 +1,6 @@
 # DR-M20 — 環境・実行基盤 状態管理ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 **レイヤ:** Execution Harness / Operating Context  
 **目的:** 使用中の実行環境を「時間方向に状態を持つ資源」として管理し、環境由来Failureを開発Failureへ誤分類しない。

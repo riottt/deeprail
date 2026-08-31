@@ -12,12 +12,18 @@
     "missing"
   ],
   "release_policy": {
-    "required_synced_languages": [
-      "ja",
+    "formal_release_languages": [
+      "ja"
+    ],
+    "preview_projection_languages": [
       "en"
     ],
+    "required_synced_languages": [
+      "ja"
+    ],
     "allow_incomplete_when_release_status": [
-      "unreleased"
-    ]
+      "released"
+    ],
+    "incomplete_language_rule": "Only explicitly declared preview_projection_languages may remain missing in a released version."
   }
 }

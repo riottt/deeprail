@@ -1,7 +1,6 @@
 # DR-M05 — AI Native Development Lifecycle
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 DeepRailは、AI駆動開発を「必ずN個の工程を直列に通る手順」として定義しない。
 

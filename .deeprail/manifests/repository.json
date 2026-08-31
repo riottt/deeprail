@@ -1,10 +1,15 @@
 {
   "repository": {
     "name": "DeepRail",
-    "phase": "public-release-candidate-final",
-    "candidate_version": "0.16.8rc3",
-    "release_status": "public-release-candidate-final",
-    "standard_content_status": "candidate"
+    "phase": "public-release",
+    "version": "0.16.8",
+    "release_status": "released",
+    "standard_content_status": "canonical",
+    "public_release": true,
+    "release_scope": {
+      "formal_projection_languages": ["ja"],
+      "preview_projection_languages": ["en"]
+    }
   },
   "brand": {
     "ja": "AIネイティブな仕事・開発・組織を設計するオープン標準。",
@@ -41,7 +46,7 @@
   "baseline": {
     "current_public_kernel_semantics": "preserved",
     "stable_module_ids": "DR-M01..DR-M25",
-    "candidate_projection": "v0.16.8"
+    "canonical_projection": "v0.16.8"
   },
   "engineering_readiness": {
     "runtime_execution_plane": "implemented",
@@ -60,5 +65,19 @@
     "self_contained": true,
     "local_sources_required": false,
     "core_semantics_vendor_neutral": true
+  },
+  "release_decision": {
+    "version": "0.16.8",
+    "public_release": "approved",
+    "canonical_promotion": "approved",
+    "approved_by": "RIO AMADA",
+    "approved_at": "2026-08-31",
+    "language_scope": {
+      "formal": ["ja"],
+      "preview": ["en"]
+    },
+    "trademark_policy": "approved-without-legal-opinion",
+    "license_boundary": "approved",
+    "evidence": ".deeprail/manifests/review.json"
   }
 }

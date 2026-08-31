@@ -2,7 +2,7 @@
 
 **The open standard for designing AI-native work, software, and organizations.**
 
-> **v0.16.8 Public Release Candidate Final / unreleased.** Public release and canonical promotion are intentionally not declared.
+> **v0.16.8 — Public Release.** The Japanese Standard projection is canonical; English normative modules are published as Preview.
 
 DeepRail now connects the long-form Book to problem diagnostics, stable Standard modules, actor-neutral workflows, a stateful evidence-gated runtime, thin agent adapters, audit history, and reinvestment.
 
@@ -31,6 +31,16 @@ python3 -m unittest discover -s tests -v
 python3 -m build
 ./scripts/build-dist
 ```
+
+## Release Status
+
+- Public release: **v0.16.8**
+- Canonical Standard projection: Japanese (`ja`), DR-M01〜DR-M25
+- English Standard projection: Preview; normative module translation is planned for a later release
+- Runtime communication and artifact output: Japanese and English
+- Software license: [MIT](LICENSE)
+- Documentation license: [CC BY 4.0](LICENSE-DOCUMENTATION)
+- Release history: [CHANGELOG.md](CHANGELOG.md)
 
 
 ## Authorship

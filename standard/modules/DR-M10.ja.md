@@ -1,7 +1,6 @@
 # DR-M10 — SCM・Repository運用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 14.1 SCM / Collaboration Adapter共通標準
 

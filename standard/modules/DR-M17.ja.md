@@ -1,7 +1,6 @@
 # DR-M17 — 品質評価・Harness Evalsガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 21.-1 Trust Architecture — 「AIを信頼する」を分解する
 

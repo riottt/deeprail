@@ -1,7 +1,6 @@
 # DR-M12 — AI実行基盤・モデル選定ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 16.1 Runtime Adapter
 

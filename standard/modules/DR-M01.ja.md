@@ -1,7 +1,6 @@
 # DR-M01 — AI駆動開発 基本方針
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 5.1 HumanとAIの責務境界を固定しない
 

@@ -1,7 +1,6 @@
 # DR-M04 — 環境構築・セットアップガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 ## 8.1 対応対象
 

@@ -1,7 +1,6 @@
 # DR-M23 — 経営・AI導入・成熟度運用ガイド
 
-> Status: **release-candidate v0.16.8**  
-> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
 
 **レイヤ:** Organization / Management  
 **主な読者:** CEO / Founder / CTO / CIO / VPoE / AI・DX推進責任者 / PMO  

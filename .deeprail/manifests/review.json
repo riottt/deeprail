@@ -16,5 +16,32 @@
     "trademark_change",
     "governance_change"
   ],
-  "default_decision_owner": "RIO AMADA"
+  "default_decision_owner": "RIO AMADA",
+  "release_decision": {
+    "version": "0.16.8",
+    "public_release": "approved",
+    "canonical_promotion": "approved",
+    "approved_by": "RIO AMADA",
+    "approved_at": "2026-08-31",
+    "language_scope": {
+      "formal": ["ja"],
+      "preview": ["en"]
+    },
+    "trademark_policy": "approved-without-legal-opinion",
+    "license_boundary": "approved",
+    "evidence": {
+      "local_validation": [
+        "./scripts/generate",
+        "./scripts/check",
+        "python -m unittest discover -s tests -v",
+        "python -m build",
+        "python scripts/release-audit"
+      ],
+      "github_actions": [
+        "https://github.com/riottt/deeprail/actions/runs/33353092027",
+        "https://github.com/riottt/deeprail/actions/runs/33353092041",
+        "https://github.com/riottt/deeprail/actions/runs/33352004212"
+      ]
+    }
+  }
 }
