@@ -2,6 +2,11 @@
 name: Release Build
 on:
   workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Existing v* tag to build and attach to"
+        required: true
+        type: string
   push:
     tags: ["v*"]
 permissions:
@@ -13,9 +18,12 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ inputs.release_tag || github.ref }}
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
+      - run: python -m pip install --upgrade "setuptools>=77.0.3" wheel
       - run: pip install -e .[dev]
       - run: python scripts/release-audit
       - run: python -m build
@@ -29,15 +37,16 @@ jobs:
           cp dist/* .artifacts/release-assets/
           cp .artifacts/dist/* .artifacts/release-assets/
       - name: Publish GitHub Release assets
-        if: startsWith(github.ref, 'refs/tags/v')
+        if: inputs.release_tag != '' || startsWith(github.ref, 'refs/tags/v')
         env:
           GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.release_tag || github.ref_name }}
         run: |
-          if ! gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
-            gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --title "DeepRail $GITHUB_REF_NAME" --notes-file RELEASE_NOTES_v0.16.8.md --latest
+          if ! gh release view "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create "$RELEASE_TAG" --repo "$GITHUB_REPOSITORY" --title "DeepRail $RELEASE_TAG" --notes-file RELEASE_NOTES_v0.16.8.md --latest
           fi
-          gh release upload "$GITHUB_REF_NAME" .artifacts/release-assets/* --repo "$GITHUB_REPOSITORY" --clobber
+          gh release upload "$RELEASE_TAG" .artifacts/release-assets/* --repo "$GITHUB_REPOSITORY" --clobber
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: deeprail-release-${{ github.ref_name }}
+          name: deeprail-release-${{ inputs.release_tag || github.ref_name }}
           path: .artifacts/release-assets/
