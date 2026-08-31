@@ -33,7 +33,7 @@ for p in sorted((ROOT/"workflows").glob("*/workflow.yaml")):
 for banned in [ROOT/"workflows/ja",ROOT/"workflows/en"]:
     if banned.exists(): err("language-forked workflow directory forbidden: "+str(banned.relative_to(ROOT)))
 # Attribution / public provenance
-for rel in ["README.md","README.ja.md",".deeprail/manifests/repository.json"]:
+for rel in ["AUTHORSHIP.md",".deeprail/manifests/repository.json"]:
     if "RIO AMADA" not in (ROOT/rel).read_text(encoding="utf-8"): err("missing author attribution: "+rel)
 patterns=[
     r"External reference:",

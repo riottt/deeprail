@@ -2,8 +2,6 @@
 
 **AIネイティブな仕事・開発・組織を設計するオープン標準。**
 
-**Creator / Lead Author: RIO AMADA**
-
 > **v0.16.8 Public Release Candidate Final / unreleased** — 公開用の文章・Runtime・Validationを統合した最終候補です。Stable Canonical Promotionは別途Governance Decisionとして扱います。
 
 ## 5つの入口
@@ -110,4 +108,4 @@ This final release candidate is self-contained for publication and use. Stable c
 
 ## Authorship
 
-DeepRailのCreator / Lead Authorは **RIO AMADA** です。公開境界は [`AUTHORSHIP.md`](AUTHORSHIP.md) を参照してください。
+著作者情報と公開境界は [`AUTHORSHIP.md`](AUTHORSHIP.md) を参照してください。

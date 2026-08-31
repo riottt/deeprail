@@ -2,8 +2,6 @@
 
 **The open standard for designing AI-native work, software, and organizations.**
 
-**Creator / Lead Author: RIO AMADA**
-
 > **v0.16.8 Public Release Candidate Final / unreleased.** Public release and canonical promotion are intentionally not declared.
 
 DeepRail now connects the long-form Book to problem diagnostics, stable Standard modules, actor-neutral workflows, a stateful evidence-gated runtime, thin agent adapters, audit history, and reinvestment.
@@ -37,4 +35,4 @@ python3 -m build
 
 ## Authorship
 
-DeepRail Creator / Lead Author: **RIO AMADA**. See [`AUTHORSHIP.md`](AUTHORSHIP.md) for the public-content boundary.
+Authorship and the public-content boundary are documented in [`AUTHORSHIP.md`](AUTHORSHIP.md).
