@@ -31,6 +31,13 @@ docs = ["mkdocs-material>=9,<10"]
 [project.scripts]
 deeprail = "deeprail_runtime.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/riottt/deeprail"
+Repository = "https://github.com/riottt/deeprail"
+Issues = "https://github.com/riottt/deeprail/issues"
+Changelog = "https://github.com/riottt/deeprail/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/riottt/deeprail/tree/main/docs"
+
 [tool.setuptools]
 package-dir = {"" = "runtime"}
 include-package-data = true

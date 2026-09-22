@@ -2,6 +2,11 @@
 
 **The open standard for designing AI-native work, software, and organizations.**
 
+[![CI](https://github.com/riottt/deeprail/actions/workflows/ci.yml/badge.svg)](https://github.com/riottt/deeprail/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/riottt/deeprail)](https://github.com/riottt/deeprail/releases)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://github.com/riottt/deeprail)
+[![License: MIT / CC BY 4.0](https://img.shields.io/badge/license-MIT%20%2F%20CC--BY--4.0-green)](LICENSE)
+
 > **v0.16.8 — Public Release.** The Japanese Standard projection is canonical; English normative modules are published as Preview.
 
 DeepRail now connects the long-form Book to problem diagnostics, stable Standard modules, actor-neutral workflows, a stateful evidence-gated runtime, thin agent adapters, audit history, and reinvestment.
