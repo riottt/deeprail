@@ -1,6 +1,6 @@
 # DR-M06 — Development Loop Design Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 10.1 The Large Loop
 

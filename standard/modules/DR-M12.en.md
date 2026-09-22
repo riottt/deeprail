@@ -1,6 +1,6 @@
 # DR-M12 — AI Execution Platform and Model Selection Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 16.1 Runtime Adapter
 

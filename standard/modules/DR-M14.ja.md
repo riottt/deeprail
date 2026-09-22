@@ -1,6 +1,6 @@
 # DR-M14 — 生きたドキュメント・知識管理ガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 18.1 Living Documentの定義
 

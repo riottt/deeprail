@@ -1,6 +1,6 @@
 # DR-M02 — ハーネス設計原則
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 6.0 Harness Engineeringはなぜ生まれたのか
 

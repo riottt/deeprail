@@ -1,6 +1,6 @@
 # DR-M17 — Quality Evaluation and Harness Evals Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 21.-1 Trust Architecture — Decomposing "Trusting AI"
 

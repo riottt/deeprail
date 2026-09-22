@@ -1,6 +1,6 @@
 # DR-M08 — 開発手法別 AI駆動適用ガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 共通Lifecycleの責務は維持し、Methodに応じて工程の束ね方・Gate・Evidenceを変える。
 

@@ -1,6 +1,6 @@
 # DR-M16 — Security and AI Governance Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 20.1 Do Not Treat Permissions as One Bundle
 

@@ -1,6 +1,6 @@
 # DR-M10 — SCM / Repository Operations Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 14.1 Common Standard for SCM / Collaboration Adapters
 

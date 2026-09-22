@@ -1,6 +1,6 @@
 # DR-M21 — Enforcement and Standard Observation Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 **Layer:** Execution Harness / Governance
 **Purpose:** Make it auditable how far declared Rules / Policies / Gates are actually enforced, and whether the enforcement mechanism itself is operating normally.

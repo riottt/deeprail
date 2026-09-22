@@ -1,6 +1,6 @@
 # DR-M13 — AI Asset and Harness Change Management Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 17.1 Managed Objects
 

@@ -1,6 +1,6 @@
 # DR-M25 — AI Adoption Promotion and Organizational Transition Management Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 **Layer:** Transformation / Organization / Operating Model
 **Main readers:** PM / Program Manager / AI promotion lead / CTO / VPoE / PMO / Engineering Manager / Security, IT, Platform leads

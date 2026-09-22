@@ -1,6 +1,6 @@
 # DR-M02 — Harness Design Principles
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 6.0 Why Harness Engineering Emerged
 

@@ -1,6 +1,6 @@
 # DR-M08 — AI-Driven Application Guide by Development Methodology
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 Keep the responsibilities of the common Lifecycle, and change how stages are bundled, Gates, and Evidence according to the Method.
 

@@ -1,6 +1,6 @@
 # DR-M04 — Environment Setup Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 8.1 Covered Targets
 

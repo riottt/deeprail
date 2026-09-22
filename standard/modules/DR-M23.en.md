@@ -1,6 +1,6 @@
 # DR-M23 — Management, AI Adoption, and Maturity Operations Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 **Layer:** Organization / Management
 **Main readers:** CEO / Founder / CTO / CIO / VPoE / AI & DX promotion leads / PMO

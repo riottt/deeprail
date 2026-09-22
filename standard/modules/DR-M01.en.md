@@ -1,6 +1,6 @@
 # DR-M01 — AI-Driven Development Basic Policy
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 5.1 Do Not Fix the Responsibility Boundary Between Human and AI
 

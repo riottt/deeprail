@@ -11,7 +11,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT AND CC-BY-4.0"
 license-files = ["LICENSE", "LICENSE-DOCUMENTATION", "LICENSE-BOUNDARY.md"]
-authors = [{name = "RIO AMADA"}]
+authors = [{name = "riottt"}]
 dependencies = [
   "PyYAML>=6.0",
   "jsonschema>=4.18"

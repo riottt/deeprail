@@ -1,6 +1,6 @@
 # DR-M07 — Scale Assessment and Work Item Decomposition Rules
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 This chapter is not a manual for humans to fully decompose Epic / Feature / Issue / Task by hand.
 

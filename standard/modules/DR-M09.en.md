@@ -1,6 +1,6 @@
 # DR-M09 — Team and Role Operations Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 This chapter does not create "new job titles for AI."
 It defines **AI-Native Team Leadership Functions** that can be assigned to existing Roles such as Scrum Master, Development Lead, Tech Lead, Engineering Lead, and Sub Lead.

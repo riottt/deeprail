@@ -1,6 +1,6 @@
 # DR-M20 — Environment / Execution Platform State Management Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 **Layer:** Execution Harness / Operating Context
 **Purpose:** Manage in-use execution environments as "resources with state over time," and do not misclassify environment-derived Failures as development Failures.

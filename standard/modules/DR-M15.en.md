@@ -1,6 +1,6 @@
 # DR-M15 — Talent Development, Proficiency, and Practice Guide for the AI Era
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 19.1 The Purpose of Talent Development
 

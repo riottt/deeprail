@@ -1,6 +1,6 @@
 # DR-M19 — AI Authority Delegation and Autonomy Operations Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 This chapter defines the long-term destination of AI-driven team development.
 

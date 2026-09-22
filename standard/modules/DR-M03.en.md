@@ -1,6 +1,6 @@
 # DR-M03 — Harness Composition and Usage Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 7.1 Responsibilities of AI Assets
 

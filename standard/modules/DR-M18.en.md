@@ -1,6 +1,6 @@
 # DR-M18 — Release / Production Operations Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 22.1 Separate Development Complete from Release Complete
 

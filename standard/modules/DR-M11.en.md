@@ -1,6 +1,6 @@
 # DR-M11 — External Tool Integration Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 15.1 Organize Tools by Source of Truth
 

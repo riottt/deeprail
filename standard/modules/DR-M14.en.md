@@ -1,6 +1,6 @@
 # DR-M14 — Living Documents and Knowledge Management Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 18.1 Definition of a Living Document
 

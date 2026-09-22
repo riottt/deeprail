@@ -1,6 +1,6 @@
 # DR-M24 — Demand Supply and Acceptance Operations Guide
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 **Layer:** Organization ↔ Operating Model ↔ Engineering
 **Main readers:** Product / Business / PM / PO / Engineering Lead / Architect

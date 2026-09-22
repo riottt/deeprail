@@ -1,6 +1,6 @@
 # DR-M05 — AI Native Development Lifecycle
 
-> Status: **preview v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **preview v0.16.8**> Creator / Lead Author: **riottt**
 
 DeepRail does not define AI-driven development as "a procedure that always passes through N stages in series."
 
