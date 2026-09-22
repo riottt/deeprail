@@ -1,6 +1,6 @@
 # DR-M11 — 外部ツール連携ガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 15.1 ToolをSource of Truthで整理する
 

@@ -34,3 +34,9 @@ nav:
   - English:
       - English Home: docs/en/README.md
       - Quickstart: docs/en/quickstart.md
+      - How It Works: docs/en/how-deeprail-works.md
+      - Diagnostic: docs/en/diagnostic.md
+      - Problem Map: docs/en/problem-map.md
+      - Runtime: docs/en/runtime.md
+      - Evidence Gates: docs/en/evidence-gates.md
+      - Production Adoption: docs/en/production-adoption.md

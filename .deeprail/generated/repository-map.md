@@ -6,7 +6,7 @@
 - Release: `released`
 - Modules: `25`
 - Workflows: `10`
-- Creator / Lead Author: **RIO AMADA**
+- Creator / Lead Author: **riottt**
 
 ## Entry points
 - Book: `book/ja/chapters/README.md`

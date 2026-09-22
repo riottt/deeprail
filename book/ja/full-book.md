@@ -1,6 +1,6 @@
 # DeepRail — AIネイティブ組織・開発標準
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 このFull Bookは、DeepRailを問題・思想・実務・開発・Harness・組織まで一続きで読むための統合読書版です。
 
@@ -60,7 +60,7 @@
 
 # Chapter 01. DeepRailとは何か — AIが働く組織を設計する
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # DeepRailの最上位モデル
 
@@ -384,7 +384,7 @@ Risk・Autonomy・Approval Strength・Evidence Gradeに応じた有効なGateを
 
 # Chapter 02. AIは「ツール」から「実行主体」へ変わる
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # AI時代の人間の役割
 
@@ -641,7 +641,7 @@ AIがPlanning、Evaluation、Coordination、Priorityへ入るほど、話はTool
 
 # Chapter 03. 人間とAIの役割境界は固定されない
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 5. 01_AI駆動開発 基本方針
 
@@ -1305,7 +1305,7 @@ Reviewの対象を成果物の量からDecision/Evidenceへ移す。
 
 # Chapter 04. なぜAI導入は経営戦略になるのか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # Transformation Profile
 
@@ -1783,7 +1783,7 @@ Strategy Option Design
 
 # Chapter 05. AIと働く人間の心構え
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # AI時代の人間の役割
 
@@ -2087,7 +2087,7 @@ Human評価と比較し、False Accept / False Reject / Unknownを観察する�
 
 # Chapter 06. 強い会社と強いHarnessはなぜ似るのか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # DeepRailの全体ループ
 
@@ -2627,7 +2627,7 @@ Harnessが高度でも、高リスク業務ではHuman Gateを残す。
 
 # Chapter 07. AI Native OrganizationのOperating Model
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # DR-M22. 22_AI-Native Organization Operating Modelガイド
 
@@ -2887,7 +2887,7 @@ AI Workerの評価を、そのまま人間の人事評価へ直訳しない。
 
 # Chapter 08. 自分たちの現在地を知る — GreenfieldからLegacyまで
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # Legacy / Brownfield Compatibility Profile
 
@@ -3201,7 +3201,7 @@ ConstraintはBacklogへ接続する。
 
 # Chapter 09. AI導入を阻む制約を可視化する
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## M25.2 Constraint Register
 
@@ -3362,7 +3362,7 @@ Managed Organization Platform
 
 # Chapter 10. 経営・Security・IT・現場をどう動かすか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## M25.3 Stakeholder Map
 
@@ -3695,7 +3695,7 @@ PermissionはExecution Controlの話で、Decision RightsはOperating Modelの�
 
 # Chapter 11. Pilotから標準化・全社展開まで
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## M25.9 Pilot Design
 
@@ -3924,7 +3924,7 @@ No-scale-path
 
 # Chapter 12. AI時代の人材をどう育てるか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 19. 15_AI時代の人材育成・習熟・実践ガイド
 
@@ -4410,7 +4410,7 @@ Standardization+
 
 # Chapter 13. なぜ最初に一人でEnd-to-End開発を体験するのか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 19.6 AI Delegation Literacy — Tool利用の次に育てる能力
 
@@ -4898,7 +4898,7 @@ Golden Path自身もHarness / Runtime更新時に再実行し、古い成功例�
 
 # Chapter 14. 仕事はどこから生まれるのか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # DR-M24. 24_要求供給・受入運用ガイド
 
@@ -4949,7 +4949,7 @@ Feedback
 
 # Chapter 15. 顧客・利用者の本当の要求を発見する
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 縦断ケース — FlowDesk「代理承認」
 
@@ -5210,7 +5210,7 @@ demand:
 
 # Chapter 16. 曖昧な要求を「見える形」にする
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 **Delegation Contract**
 
@@ -5523,7 +5523,7 @@ AIがCodingやDraftを高速化しても、Domain理解・Modeling・Knowledge C
 
 # Chapter 17. 同じものを見て認識を合わせる
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 > **一行の依頼は、AIならすぐ形にできる。だから、その一行の意味まで決まった気にならない方がいい。**
 
@@ -5723,7 +5723,7 @@ Agent数は三つだった。並列性は三倍ではなかった。
 
 # Chapter 18. 何を決め、何をまだ決めないか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 この条件が揃って、ようやくParallel Executionが本当の速度になる。
 
@@ -5896,7 +5896,7 @@ Work Item update
 
 # Chapter 19. 合意をAIが実行できる契約へ変える
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ここでは、Humanの最初の仮説よりMachine Evidenceが正しかった。
 
@@ -6136,7 +6136,7 @@ Reactでダイアログを作る
 
 # Chapter 20. AIに仕事を分解・再分解させる
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 11. 07_規模判定・Work Item分割ルール
 
@@ -6768,7 +6768,7 @@ Objective
 
 # Chapter 21. 人間とAIのチームをどう設計するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 13. 09_チーム・役割運用ガイド
 
@@ -6930,7 +6930,7 @@ Cost / Model profile どのModel帯で成立するか
 
 # Chapter 22. AI時代のTeam Leadは何をするのか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 13.1 AI-Native Team Leadership Function
 
@@ -7395,7 +7395,7 @@ Harness / Standard Improvement Candidate
 
 # Chapter 23. AI Native Teamの会議と意思決定
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 13.7 Team会議を「Status読み上げ」からDecision Systemへ変える
 
@@ -7694,7 +7694,7 @@ Harness / Standard Improvement Candidate
 
 # Chapter 24. Agent数ではなくFlowを管理する
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 13.6 Team Capacity — Agent数をThroughputとみなさない
 
@@ -8116,7 +8116,7 @@ AI駆動開発の改善対象は、Coding工程だけではない。
 
 # Chapter 25. AIにどこまで任せるか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 5. 01_AI駆動開発 基本方針
 
@@ -8744,7 +8744,7 @@ Reviewの対象を成果物の量からDecision/Evidenceへ移す。
 
 # Chapter 26. AIの成果を人間はどう評価するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 21.X Human Evaluation Interface
 
@@ -9130,7 +9130,7 @@ Reviewの抽象度が上がる。
 
 # Chapter 27. AIの評価をどこまで信頼しGO判断を委譲するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 21.X.5 Evaluation Authority — AI評価にどこまでGO権限を与えるか
 
@@ -9747,7 +9747,7 @@ PermissionはExecution Controlの話で、Decision RightsはOperating Modelの�
 
 # Chapter 28. AI Nativeな開発Lifecycleをどう設計するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 9. 05_AI Native Development Lifecycle
 
@@ -10283,7 +10283,7 @@ AIがCodingやDraftを高速化しても、Domain理解・Modeling・Knowledge C
 
 # Chapter 29. Loop・Retry・Re-plan・Re-decomposition
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 10. 06_開発ループ設計ガイド
 
@@ -10511,7 +10511,7 @@ Work Breakdownは静的な計画書ではなく、
 
 # Chapter 30. Agile・Waterfall・HybridをAI時代に再設計する
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 12. 08_開発手法別 AI駆動適用ガイド
 
@@ -10727,7 +10727,7 @@ Document
 
 # Chapter 31. 規模・Risk・Autonomy・Operating Contextで適用を変える
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 11. 07_規模判定・Work Item分割ルール
 
@@ -11446,7 +11446,7 @@ DeepRailは固定Processを全案件へ強制する標準ではなく、Axisの�
 
 # Chapter 32. SCM・Repository・Work Isolation
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 14. 10_SCM・Repository運用ガイド
 
@@ -11890,7 +11890,7 @@ AIがCI失敗を修正する場合も、失敗原因をImplementation / Environm
 
 # Chapter 33. Legacy / Monorepo / Multi-repoをどう扱うか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # Legacy / Brownfield Compatibility Profile
 
@@ -12166,7 +12166,7 @@ Validation対象：
 
 # Chapter 34. CI/CDはAI駆動開発の背骨である
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 56. CI/CDとの接続
 
@@ -12297,7 +12297,7 @@ Harness成熟度が高くても、Production操作は別のRisk Policyで判断�
 
 # Chapter 35. Test・Eval・Quality Gateをどこへ置くか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 21. 17_品質評価・Harness Evalsガイド
 
@@ -13184,7 +13184,7 @@ Approvalが形だけ残っているなら、Gateがあるとは数えない。Fa
 
 # Chapter 36. Environment State / Provenanceをどう管理するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # DR-M20. 20_環境・実行基盤 状態管理ガイド
 
@@ -13354,7 +13354,7 @@ Reproduce on fresh/known environment?
 
 # Chapter 37. Release・Production・Rollback・Observability
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 22. 18_Release・Production運用ガイド
 
@@ -13445,7 +13445,7 @@ Harness自体を観測する。
 
 # Chapter 38. 成果と学習を次のAIへ戻す
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 18. 14_生きたドキュメント・知識管理ガイド
 
@@ -13708,7 +13708,7 @@ Harness Epic
 
 # Chapter 39. AI開発はなぜHarness Engineeringへ進んだのか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 6. 02_ハーネス設計原則
 
@@ -14193,7 +14193,7 @@ Routing Class
 
 # Chapter 40. 優れたHarnessはどう設計するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 ## 6.1 Harness設計はDelivery Systemの理解から始める
 
@@ -14381,7 +14381,7 @@ Harnessが高度でも、高リスク業務ではHuman Gateを残す。
 
 # Chapter 41. Context Engineering
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 16. 12_AI実行基盤・モデル選定ガイド
 
@@ -14517,7 +14517,7 @@ Quality
 
 # Chapter 42. Rule・Skill・Agent・Hookをどう構成するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 7. 03_ハーネス構成・利用ガイド
 
@@ -14671,7 +14671,7 @@ Agent数は最初から増やしすぎない。
 
 # Chapter 43. Model・Tool・Runtime・Permissionをどう接続するか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 16. 12_AI実行基盤・モデル選定ガイド
 
@@ -14859,7 +14859,7 @@ Runtime Adapter
 
 # Chapter 44. Harnessをどう評価し、壊さず進化させるか
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # 17. 13_AI資産・Harness変更管理ガイド
 
@@ -15150,7 +15150,7 @@ Baseline比較
 
 # Chapter 45. Harness EngineeringからOrganization Engineeringへ
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**
 
 # DR-M22. 22_AI-Native Organization Operating Modelガイド
 

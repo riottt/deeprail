@@ -1,6 +1,6 @@
 # Authorship
 
-**DeepRail Creator / Lead Author: RIO AMADA**
+**DeepRail Creator / Lead Author: riottt**
 
 DeepRail is published as an integrated method, standard, workflow system, and runtime architecture under the DeepRail project.
 

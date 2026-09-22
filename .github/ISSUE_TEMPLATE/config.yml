@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/riottt/deeprail/security/advisories/new
+    about: Report vulnerabilities privately via GitHub Security Advisories. See SECURITY.md.
+  - name: Usage questions
+    url: https://github.com/riottt/deeprail/blob/main/SUPPORT.md
+    about: What to include when asking for help.
