@@ -10,4 +10,4 @@ DeepRailの考え方を、問題・ケース・原則・実務・組織まで一
 
 Bookは「Why」を担当します。正確なRuleは `standard/`、実行は `workflows/` へ進みます。
 
-**Creator / Lead Author: RIO AMADA**
+**Creator / Lead Author: riottt**

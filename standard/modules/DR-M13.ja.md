@@ -1,6 +1,6 @@
 # DR-M13 — AI資産・Harness変更管理ガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 17.1 管理対象
 

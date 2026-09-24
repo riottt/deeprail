@@ -11,8 +11,8 @@
           "path": "standard/modules/DR-M01.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M01.en.md",
           "scope": "preview"
         }
       }
@@ -28,8 +28,8 @@
           "path": "standard/modules/DR-M02.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M02.en.md",
           "scope": "preview"
         }
       }
@@ -45,8 +45,8 @@
           "path": "standard/modules/DR-M03.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M03.en.md",
           "scope": "preview"
         }
       }
@@ -62,8 +62,8 @@
           "path": "standard/modules/DR-M04.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M04.en.md",
           "scope": "preview"
         }
       }
@@ -79,8 +79,8 @@
           "path": "standard/modules/DR-M05.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M05.en.md",
           "scope": "preview"
         }
       }
@@ -96,8 +96,8 @@
           "path": "standard/modules/DR-M06.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M06.en.md",
           "scope": "preview"
         }
       }
@@ -113,8 +113,8 @@
           "path": "standard/modules/DR-M07.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M07.en.md",
           "scope": "preview"
         }
       }
@@ -130,8 +130,8 @@
           "path": "standard/modules/DR-M08.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M08.en.md",
           "scope": "preview"
         }
       }
@@ -147,8 +147,8 @@
           "path": "standard/modules/DR-M09.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M09.en.md",
           "scope": "preview"
         }
       }
@@ -164,8 +164,8 @@
           "path": "standard/modules/DR-M10.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M10.en.md",
           "scope": "preview"
         }
       }
@@ -181,8 +181,8 @@
           "path": "standard/modules/DR-M11.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M11.en.md",
           "scope": "preview"
         }
       }
@@ -198,8 +198,8 @@
           "path": "standard/modules/DR-M12.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M12.en.md",
           "scope": "preview"
         }
       }
@@ -215,8 +215,8 @@
           "path": "standard/modules/DR-M13.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M13.en.md",
           "scope": "preview"
         }
       }
@@ -232,8 +232,8 @@
           "path": "standard/modules/DR-M14.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M14.en.md",
           "scope": "preview"
         }
       }
@@ -249,8 +249,8 @@
           "path": "standard/modules/DR-M15.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M15.en.md",
           "scope": "preview"
         }
       }
@@ -266,8 +266,8 @@
           "path": "standard/modules/DR-M16.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M16.en.md",
           "scope": "preview"
         }
       }
@@ -283,8 +283,8 @@
           "path": "standard/modules/DR-M17.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M17.en.md",
           "scope": "preview"
         }
       }
@@ -300,8 +300,8 @@
           "path": "standard/modules/DR-M18.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M18.en.md",
           "scope": "preview"
         }
       }
@@ -317,8 +317,8 @@
           "path": "standard/modules/DR-M19.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M19.en.md",
           "scope": "preview"
         }
       }
@@ -334,8 +334,8 @@
           "path": "standard/modules/DR-M20.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M20.en.md",
           "scope": "preview"
         }
       }
@@ -351,8 +351,8 @@
           "path": "standard/modules/DR-M21.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M21.en.md",
           "scope": "preview"
         }
       }
@@ -368,8 +368,8 @@
           "path": "standard/modules/DR-M22.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M22.en.md",
           "scope": "preview"
         }
       }
@@ -385,8 +385,8 @@
           "path": "standard/modules/DR-M23.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M23.en.md",
           "scope": "preview"
         }
       }
@@ -402,8 +402,8 @@
           "path": "standard/modules/DR-M24.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M24.en.md",
           "scope": "preview"
         }
       }
@@ -419,8 +419,8 @@
           "path": "standard/modules/DR-M25.ja.md"
         },
         "en": {
-          "status": "missing",
-          "path": null,
+          "status": "reviewing",
+          "path": "standard/modules/DR-M25.en.md",
           "scope": "preview"
         }
       }
