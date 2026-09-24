@@ -1,0 +1,41 @@
+name: Feature request
+description: Propose an improvement or new capability for DeepRail
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Describe the friction or gap you hit. Concrete situations help more than abstract ideas.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What you would like DeepRail to do or provide.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Standard (modules / rules)
+        - Book / docs
+        - Workflows
+        - Runtime / CLI
+        - Repository / harness
+        - Other
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not require changing a Stable Module ID (DR-M01〜M25)
+          required: false
+        - label: This does not change license or trademark terms
+          required: false

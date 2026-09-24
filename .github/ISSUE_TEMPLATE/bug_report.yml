@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible problem in DeepRail
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please do not include secrets, credentials, production data, or private project content.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: A clear description of the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The command you ran and the smallest input that triggers the problem.
+      placeholder: |
+        deeprail init --target /tmp/example --profile lightweight
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: DeepRail version, Python version, and operating system.
+      placeholder: |
+        DeepRail: v0.16.8
+        Python: 3.12
+        OS: macOS 15
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: The smallest relevant output or error. Redact anything private.
+      render: text
+    validations:
+      required: false

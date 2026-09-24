@@ -1,6 +1,6 @@
 # DR-M06 — 開発ループ設計ガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 10.1 大ループ
 

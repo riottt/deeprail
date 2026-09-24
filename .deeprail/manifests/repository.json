@@ -17,7 +17,7 @@
   },
   "authors": [
     {
-      "name": "RIO AMADA",
+      "name": "riottt",
       "role": "Creator / Lead Author"
     }
   ],
@@ -61,7 +61,7 @@
     "packaged_resources": "implemented"
   },
   "public_projection": {
-    "author": "RIO AMADA",
+    "author": "riottt",
     "self_contained": true,
     "local_sources_required": false,
     "core_semantics_vendor_neutral": true
@@ -70,7 +70,7 @@
     "version": "0.16.8",
     "public_release": "approved",
     "canonical_promotion": "approved",
-    "approved_by": "RIO AMADA",
+    "approved_by": "riottt",
     "approved_at": "2026-08-31",
     "language_scope": {
       "formal": ["ja"],

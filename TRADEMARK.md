@@ -6,4 +6,4 @@ You may refer to DeepRail to describe compatibility, implementation, or independ
 
 This is an operational project policy, not legal advice or a legal opinion. Rights and obligations under applicable trademark law remain applicable. The v0.16.8 release records this policy as approved for publication without representing that a separate legal opinion was obtained.
 
-Creator / Lead Author: RIO AMADA
+Creator / Lead Author: riottt

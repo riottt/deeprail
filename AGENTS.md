@@ -9,4 +9,4 @@ When operating this repository:
 4. Do not fork workflows by language
 5. Keep runtime adapters thin
 6. Run `./scripts/generate`, `./scripts/check`, and tests after structural changes
-7. Public release / canonical promotion requires RIO AMADA
+7. Public release / canonical promotion requires riottt
