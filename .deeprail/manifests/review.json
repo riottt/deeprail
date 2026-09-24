@@ -16,12 +16,12 @@
     "trademark_change",
     "governance_change"
   ],
-  "default_decision_owner": "RIO AMADA",
+  "default_decision_owner": "riottt",
   "release_decision": {
     "version": "0.16.8",
     "public_release": "approved",
     "canonical_promotion": "approved",
-    "approved_by": "RIO AMADA",
+    "approved_by": "riottt",
     "approved_at": "2026-08-31",
     "language_scope": {
       "formal": ["ja"],

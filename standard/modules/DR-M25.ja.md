@@ -1,6 +1,6 @@
 # DR-M25 — AI導入推進・組織移行マネジメントガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 **レイヤ:** Transformation / Organization / Operating Model  
 **主な読者:** PM / Program Manager / AI推進責任者 / CTO / VPoE / PMO / Engineering Manager / Security・IT・Platform責任者  

@@ -1,6 +1,6 @@
 # DR-M16 — セキュリティ・AIガバナンスガイド
 
-> Status: **canonical v0.16.8**> Creator / Lead Author: **RIO AMADA**
+> Status: **canonical v0.16.8**> Creator / Lead Author: **riottt**
 
 ## 20.1 権限を一括で考えない
 
