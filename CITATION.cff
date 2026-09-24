@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use DeepRail, please cite it using these metadata."
+title: "DeepRail — The open standard for designing AI-native work, software, and organizations"
+version: "0.16.8"
+date-released: "2026-08-31"
+url: "https://github.com/riottt/deeprail"
+repository-code: "https://github.com/riottt/deeprail"
+license: "MIT AND CC-BY-4.0"
+authors:
+  - name: "riottt"

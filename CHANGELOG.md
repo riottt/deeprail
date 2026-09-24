@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Added the English Preview projection of Standard modules DR-M01〜M25 (`standard/modules/*.en.md`) and expanded `docs/en` to full parity with `docs/ja`.
+- Switched public attribution from the legal name to the GitHub handle `riottt` across license notices, manifests, and generated outputs.
+- Added GitHub issue forms, a pull request template, README badges, `CITATION.cff`, `.editorconfig`, and PyPI `project.urls` metadata.
+
 ## 0.16.8 — 2026-08-31
 
 - Published DeepRail v0.16.8 as the public release.
